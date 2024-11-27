@@ -1,0 +1,125 @@
+<%
+const pageinit = {
+  title : 'レバレジーズスタッフィング株式会社' ,
+  keywords : '' ,
+  sitename: 'レバレジーズスタッフィング株式会社',
+  description : 'レバレジーズスタッフィング株式会社のコーポレートサイトです。会社概要・採用情報などについて紹介しています。' ,
+  ogurl: 'https://leverages-staffing.jp/',
+  ogimage: 'https://leverages-staffing.jp/img/ogp.jpg',
+  path : '' ,
+  type: 'website',
+  pagename : 'レバレジーズスタッフィング株式会社',
+  robots : ['index', 'follow'],
+  js:[],
+  jsfunc:[]
+};
+%>
+
+<!doctype html>
+<html lang="ja" class="lang-jp" data-script-enabled="true">
+<%- include(pageinit.path + 'module/_head.ejs',{ pageinit:pageinit }) %>
+
+<body id="toppage">
+  <!-- 全ページ共通 -->
+  <div class="wrapper">
+    <%- include(pageinit.path + 'module/_header.ejs') %>
+    <!-- 全ページ共通 -->
+
+    <!-- Here is our page's main content -->
+    <main class="l-main" id="main">
+
+      <section class="p-home__fv" id="home__fv">
+
+        <!-- PC限定 -->
+        <div class="p-home__kv" id="home__kv">
+          <div class="p-home__kv--wrapper">
+            <picture class="p-home__kv--img">
+              <source srcset="./img/kv_home-pc.webp" type="image/webp" />
+              <img src="./img/kv_home-pc.jpg" alt="つながりは誰かを支える" width="2252" height="1506" />
+            </picture>
+          </div>
+          <div class="p-home__scroll">
+            <div class="p-home__scroll--wrapper">
+              <p class="p-home__scroll--text u-text__opensans">SCROLL</p>
+              <div class="p-home__scroll--line"></div>
+            </div>
+          </div>
+        </div>
+        <!-- PC限定 -->
+
+
+        <div class="p-home__aboutus inner">
+          <!-- SP限定 -->
+           <div class="p-home__aboutus--kv">
+            <picture class="p-home__kv--img">
+              <source srcset="./img/kv_home-sp.webp" type="image/webp" />
+              <img src="./img/kv_home-sp.jpg" alt="つながりは誰かを支える" width="1125" height="1125" />
+            </picture>
+           </div>
+
+          <!-- SP限定 -->
+
+          <div class="p-home__feature" id="js-homefeature">
+            <div class="p-home__feature--pfirst">
+              <p class="p-home__feature--text">つ</p>
+              <p class="p-home__feature--text">な</p>
+              <p class="p-home__feature--text">が</p>
+              <p class="p-home__feature--text">り</p>
+              <p class="p-home__feature--text">は</p>
+            </div>
+            <div class="p-home__feature--psecond">
+              <p class="p-home__feature--text-later">誰</p>
+              <p class="p-home__feature--text-later">か</p>
+              <p class="p-home__feature--text-later">を</p>
+              <p class="p-home__feature--text-later">支</p>
+              <p class="p-home__feature--text-later">え</p>
+              <p class="p-home__feature--text-later">る</p>
+            </div>
+          </div>
+
+          <div class="p-home__aboutus--inner inner">
+            <h2 class="u-text__h2 u-margin__ttl-en">About Us</h2>
+            <p class="u-text__subttl-jp u-margin__subttl-jp" id="home__aboutus">レバレジーズスタッフィングとは</p>
+            <p class="u-text__text u-margin__text">レバレジーズスタッフィングはレバレジーズのグループ会社です。<br>
+              人材派遣サービス企業で、現在は看護師人材派遣サービス「レバウェル看護」、介護士人材派遣サービス「レバウェル介護」等を提供しています。</p>
+            <p class="u-text__text">
+              「自分たちの仕事によって、困っている誰かがプラスの感情になる」そんな事業づくりをしてます。<br>今後も人材不足や社会課題となって困っている業界があれば、社会の課題解決をしていきます。</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="p-home__bnrlink inner" id="home__bnrlink">
+        <a class="c-bnrlink" href="./company/" target="_blank">
+          <div class="c-bnrlink__block">
+            <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
+            <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
+            <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+          </div>
+          <div class="c-bnrlink__bg company"></div>
+        </a>
+        <a class="c-bnrlink c-multi" href="./environment/" target="_blank">
+          <div class="c-bnrlink__block">
+            <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
+            <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
+            <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+          </div>
+          <div class="c-bnrlink__bg environment"></div>
+        </a>
+      </section>
+
+
+    </main>
+
+    <!-- 全ページ共通 -->
+    <%- include(pageinit.path + 'module/_recruit-footer.ejs') %>
+    <%- include(pageinit.path + 'module/_footer.ejs') %>
+  </div>
+  <!-- /.wrapper -->
+
+  <script type="text/javascript" src="./js/common.js"></script>
+  <!-- 全ページ共通 -->
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+@use "../../global/"as g;
+
+
+.u-text {
+  &__opensans {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  &__notosans-jp {
+    font-family: "Noto Sans JP", serif;
+  }
+
+  //H1
+  &__h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(28);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(24);
+
+    }
+  }
+
+  // H2
+  &__h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(40);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(32);
+
+    }
+  }
+
+  // H2ボディー
+  &__h2--light {
+    font-family: "Noto Sans JP", serif;
+    font-weight: lighter;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(14);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(13);
+    }
+  }
+
+  // 見出し
+  &__heading {
+    font-family: "Noto Sans JP", serif;
+    font-weight: bold;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(20);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(18);
+    }
+  }
+  &__subttl{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    @include g.mq(pc) {
+      @include g.font-rem(40);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(32);
+
+    }
+
+  }
+  //小見出し
+  &__subttl {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(20);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(18);
+    }
+  }
+  //小見出し_日本語
+  &__subttl-jp {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: g.$red;
+    border-left: solid 2px g.$red;
+    padding-left: 8px;
+    @include g.mq(pc) {
+      @include g.font-rem(14);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(13);
+    }
+  }
+
+  //本文
+  &__maintxt {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(16);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+    }
+  }
+
+  //注釈
+  &__notes {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+
+    @include g.mq(pc) {
+      @include g.font-rem(12);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(10);
+    }
+  }
+
+  //太字
+  &__bold {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(18);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+    }
+  }
+
+  //英字あしらい
+  &__en {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(14);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(13);
+    }
+  }
+
+  //補足事項＿L
+  &__add-l {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(13);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(13);
+    }
+  }
+
+  //補足事項＿S
+  &__add-s {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(12);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(12);
+    }
+  }
+  &__text{
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(16);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+    }
+  }
+}

@@ -1,0 +1,379 @@
+@use "../../global/"as g;
+
+.p-home {
+  @include g.mq(sp) {
+    margin-top: -80px;
+  }
+
+  @include g.mq(sp) {
+    margin-top: -60px;
+  }
+
+  &__fv {
+    position: relative;
+  }
+
+
+  &__kv--wrapper {
+    @include g.mq(pc) {
+      width: 100%;
+      padding-left: 25vw;
+      height: calc(100vh - 85px);
+
+      img {
+        width: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: left center;
+
+      }
+    }
+    @include g.mq(sp) {
+    }
+  }
+
+  &__kv {
+    @include g.mq(pc) {
+      position: relative;
+      overflow: hidden;
+      height: calc(100vh - 85px);
+      max-height: calc(100vh - 85px);
+      &::before {
+        animation: img-wrap 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        background: g.$bg;
+        content: '';
+        inset: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    @include g.mq(sp) {
+      display: none;
+    }
+
+
+  }
+
+  &__scroll {
+    @include g.mq(pc) {
+      position: absolute;
+      height: 163px;
+      width: 14px;
+      bottom: 0px;
+      left: 7.8vw;
+      display: block;
+    }
+
+    @include g.mq(sp) {
+      display: none;
+    }
+  }
+
+  &__scroll--wrapper {
+    position: relative;
+    height: 163px;
+    width: 14px;
+  }
+
+  &__scroll--text {
+    @include g.mq(pc) {
+      @include g.font-rem(14);
+      color: g.$red;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 100%;
+      transform: rotate(0.75turn);
+      position: absolute;
+      left: -21px;
+      bottom: 130px;
+      display: inline-block;
+    }
+  }
+
+  &__scroll--line {
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      border-left: 1px g.$red solid;
+      animation: scroll 1.5s ease 0s infinite normal;
+      margin: 0 auto 0;
+    }
+  }
+
+
+
+
+  &__feature {
+
+    @include g.mq(pc){
+      position: fixed;
+      left: calc(50%);
+      transform: translate(-50%, 0);
+      top: calc(35vh + g.$pcHeader);
+      width: 1000px;
+      padding-top: 5px;
+      &.sticky{
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translate(0,  -50%);
+        width: 1000px;
+        padding-top: 5px;
+      }
+    }
+    @include g.mq(sp){
+      position: absolute;
+      top: 96vw;
+      left:16px;
+    }
+  }
+
+  &__feature--pfirst {
+    display: flex;
+    overflow: hidden;
+    @include g.mq(pc){
+      margin-bottom: 20px;
+
+    }
+    @include g.mq(sp){
+      margin-bottom: 16px;
+
+    }
+  }
+
+  &__feature--psecond {
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__feature--text {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "M PLUS 1", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 500;
+    background-color: #FFF;
+    border-bottom: solid 3px g.$red;
+    line-height: 92%;
+    padding-bottom: 10px;
+    margin: 0;
+    opacity: 0;
+    /* 文字を透明化 */
+    animation: textanimation 0.7s forwards;
+    @include g.mq(pc){
+      @include g.font-rem(64);
+
+    }
+    @include g.mq(sp){
+      @include g.font-rem(42);
+
+    }
+    /* 1文字目 */
+    &:nth-child(1) {
+      animation-delay: 0.15s;
+    }
+
+    /* 2文字目 */
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    /* 3文字目 */
+    &:nth-child(3) {
+      animation-delay: 0.45s;
+    }
+
+    /* 4文字目 */
+    &:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    /* 5文字目 */
+    &:nth-child(5) {
+      animation-delay: 0.75s;
+    }
+
+    /* 6文字目 */
+    &:nth-child(6) {
+      animation-delay: 0.9s;
+    }
+
+    /* 7文字目 */
+    &:nth-child(7) {
+      animation-delay: 1.15s;
+    }
+
+    /* 8文字目 */
+    &:nth-child(8) {
+      animation-delay: 1.3s;
+    }
+
+    /* 9文字目 */
+    &:nth-child(9) {
+      animation-delay: 1.45s;
+    }
+
+    /* 10文字目 */
+    &:nth-child(10) {
+      animation-delay: 1.6s;
+    }
+
+  }
+
+  &__feature--text-later {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "M PLUS 1", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 500;
+    background-color: #FFF;
+    border-bottom: solid 3px g.$red;
+    line-height: 92%;
+    padding-bottom: 10px;
+    margin: 0;
+    opacity: 0;
+    /* 文字を透明化 */
+    animation: textanimation 1s forwards;
+    @include g.mq(pc){
+      @include g.font-rem(64);
+
+    }
+    @include g.mq(sp){
+      @include g.font-rem(42);
+
+    }
+    /* 1文字目 */
+    &:nth-child(1) {
+      animation-delay: 0.9s;
+    }
+
+    /* 2文字目 */
+    &:nth-child(2) {
+      animation-delay: 1.15s;
+    }
+
+    /* 3文字目 */
+    &:nth-child(3) {
+      animation-delay: 1.3s;
+    }
+
+    /* 4文字目 */
+    &:nth-child(4) {
+      animation-delay: 1.45s;
+    }
+
+    /* 5文字目 */
+    &:nth-child(5) {
+      animation-delay: 1.6s;
+    }
+
+    /* 6文字目 */
+    &:nth-child(6) {
+      animation-delay: 1.75s;
+    }
+
+    /* 7文字目 */
+    &:nth-child(7) {
+      animation-delay: 1.9s;
+    }
+
+    /* 8文字目 */
+    &:nth-child(8) {
+      animation-delay: 2.05s;
+    }
+
+    /* 9文字目 */
+    &:nth-child(9) {
+      animation-delay: 2.2s;
+    }
+
+    /* 10文字目 */
+    &:nth-child(10) {
+      animation-delay: 2.35s;
+    }
+
+
+  }
+
+  &__aboutus {
+    position: relative;
+    @include g.mq(pc) {
+      padding-top: 180px;
+      padding-bottom: 180px;
+    }
+
+    @include g.mq(sp) {
+      padding-bottom: 60px;
+    }
+  }
+  &__aboutus--kv{
+    @include g.mq(pc) {
+      display: none;
+    }
+    @include g.mq(sp) {
+      padding-bottom: 100px;
+      margin-right: -16px;
+      margin-left: -16px;
+    }
+
+  }
+
+  &__aboutus--inner {
+    @include g.mq(pc) {
+      padding-left: 466px
+    }
+
+    @include g.mq(sp) {
+      padding: 60px 0 0;
+    }
+  }
+
+  &__bnrlink {
+    @include g.mq(pc) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include g.mq(sp) {
+      display: block;
+    }
+  }
+}
+
+@keyframes img-wrap {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 100px;
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes textanimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

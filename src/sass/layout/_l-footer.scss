@@ -1,0 +1,89 @@
+@use "../global/"as g;
+
+.l-footer {
+  background-color: g.$bg-txt;
+  color: g.$white;
+  padding-bottom: 56px;
+  &__inner {
+    @include g.mq(sp) {
+      padding: 0 16px;
+    }
+  }
+  &__container{
+    padding: 56px 0;
+    @include g.mq(pc) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include g.mq(sp) {
+      display: block;
+    }
+  }
+  &__logo{
+    display: block;
+  }
+  &__block{
+    max-width: 280px;
+    width: 100%;
+  }
+  &__policy{
+    margin-top: 40px;
+    @include g.mq(sp) {
+      margin-bottom: 40px;
+    }
+    li{
+      margin-bottom: 16px;
+      a{
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+          color: #a7adae;
+        }
+      }
+    }
+  }
+  &__policy--item{
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400; //Regular
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    @include g.font-rem(13);
+  }
+  &__nav{
+    li{
+      @include g.mq(pc) {
+        margin-bottom: 32px;
+      }
+      @include g.mq(sp) {
+        margin-bottom: 24px;
+      }
+      a{
+        text-decoration: none;
+        background-image: url('../img/arrrow_footernav.svg');
+        background-size: 8px 11px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          color: #a7adae;
+          background-image: url('../img/arrrow_footernav-hover.svg');
+        }
+      }
+    }
+  }
+  &__nav--item{
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400; //Regular
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    @include g.font-rem(12);
+  }
+  &__copy {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400; //Regular
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    @include g.font-rem(12);
+  }
+}

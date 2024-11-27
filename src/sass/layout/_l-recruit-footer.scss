@@ -1,0 +1,88 @@
+@use "../global/"as g;
+
+.l-recruit-footer {
+  background-color: g.$bg-d;
+  padding: 32px 0;
+  @include g.mq(pc) {
+    background-image: url('../img/bg_footer-recruit-pc.png');
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+    background-size: auto 100%;
+  }
+  @media screen and (max-width: 750px) {
+    background-image: url('../img/bg_footer-recruit-sp.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media screen and (max-width: 494px) {
+    background-image: url('../img/bg_footer-recruit-sp.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 494px 338px;
+  }
+
+  &__inner {
+    @include g.mq(pc) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include g.mq(sp) {
+      display: block;
+    }
+  }
+  &__ttl{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    color: g.$white;
+    margin-bottom: 14px;
+    @include g.mq(pc) {
+      @include g.font-rem(48);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(44);
+      text-align: center;
+    }
+  }
+  &__subttl{
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400; //Regular
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    color: g.$white;
+    @include g.font-rem(14);
+    @include g.mq(sp) {
+      text-align: center;
+    }
+  }
+  &__wrapper-ttl{
+    @include g.mq(sp) {
+      margin: 0 auto 32px;
+    }
+  }
+  &__wrapper-button{
+    @include g.mq(pc) {
+      display: flex;
+      max-width: 600px;
+      justify-content: space-between;
+    }
+    @include g.mq(sp) {
+      display: block;
+    }
+  }
+  &__button{
+    max-width: 292px;
+    width: 292px;
+    @include g.mq(pc) {
+      margin-left: 16px;
+    }
+    @include g.mq(sp) {
+      margin: 0 auto 16px;
+    }
+  }
+
+}

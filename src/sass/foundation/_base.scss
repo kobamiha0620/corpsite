@@ -1,0 +1,63 @@
+// // 基本の文字サイズやフォントファミリーなどの追加
+// @forward "../global/variable/v-breakpoint" as bp;
+
+// @forward "v-font" as font;
+@use "../global/" as g;
+
+@charset "UTF-8";
+
+body {
+  background-color: g.$bg;
+  font-family: "Noto Sans JP", "Open Sans", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+
+:root {
+  color-scheme: light;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+main {
+  flex-grow: 1;
+}
+.inner{
+  @include g.mq(pc) {
+    max-width: g.$pcInner;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 g.$pcPadding;
+  }
+  @include g.mq(sp) {
+    padding: 0 16px;
+    width: 100%;
+    margin: 0 auto;
+
+  }
+}
+
+.pc{
+  @include g.mq(pc) {
+    display: block;
+  }
+  @include g.mq(sp) {
+    display: none;
+  }
+}
+
+.sp{
+  @include g.mq(pc) {
+    display: none;
+  }
+  @include g.mq(sp) {
+    display: block;
+  }
+}

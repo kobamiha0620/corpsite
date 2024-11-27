@@ -1,0 +1,300 @@
+@use "../global/" as g;
+
+.l-header{
+  z-index: 10;
+  background-color: g.$white;
+  @include g.mq(pc) {
+  }
+  &__inner{
+    @include g.mq(pc) {
+      padding: 16.5px 16px 16.5px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__spinner{
+    @include g.mq(sp){
+      padding: 12px 16px 12px 15px;
+    }
+  }
+ &__logo{
+    white-space: no-wrap;
+    text-indent: -9999px;
+    display: block;
+    background-image: url('../img/logo.svg');
+    background-size: 100% auto;
+    @include g.mq(pc){
+      width: 95px;
+      height: 46px;
+    }
+    @include g.mq(sp){
+      width: 73px;
+      height: 35px;
+    }
+
+    a{
+      display: block;
+    }
+
+  }
+  
+  &__nav{
+    @include g.mq(pc) {
+      display: flex;
+      align-items: center;
+    }
+    @include g.mq(sp) {
+      flex-grow: 1;
+      background-color: g.$bg;
+      border-top: solid 1px g.$line;
+      // transition: all 0.5s ease-in-out;
+      // animation-duration: 0.5s;
+      // animation-name: fade-in;
+  
+
+    }
+  }
+  &__nav--item--list{
+    @include g.mq(pc) {
+      display: flex;
+      align-items: center;
+      li{
+          margin-left: 48px;
+          &:first-child{
+            margin-left: 0;
+          }
+          &:last-child{
+            margin-right: 38px;
+          }
+      }
+    }
+    @include g.mq(sp) {
+      display: block;
+      padding: 22.5px;
+      li{
+        margin-bottom: 4px;
+      }
+    }
+
+
+  }
+  &__nav--item{
+    text-decoration: none;
+    font-family: "Noto Sans JP", serif;
+    line-height: 100%;
+    @include g.mq(pc) {
+      font-weight: 600; //semibold
+      @include g.font-rem(14);
+      letter-spacing: 0.06em;
+      display: inline-block;
+      text-align: center;
+      outline: none;
+      border-bottom: 2px;
+      position: relative;
+      &::after{
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        display: inline-block;
+        height: 2px;
+        background: g.$red;
+        bottom: -6px;
+        transform: scale(0, 1);
+        transition: transform 0.25s;
+        transform-origin: center top;
+      }
+      &:hover{
+        &::after{
+          transform: scale(1, 1);
+        }
+      }
+  
+
+    }
+    @include g.mq(sp) {
+      font-weight: 600; //bold
+      @include g.font-rem(18);
+      letter-spacing: 0.03em;
+      display: block;
+      line-height: 355%;
+      background-image: url('../img/arrrow_spheader-nav.png');
+      background-repeat: no-repeat;
+      background-size: 7px 12px;
+      background-position: right center;
+
+    }
+  }
+  &__apply{
+    @include g.mq(pc) {
+      display: flex;
+    }
+    @media screen and (max-width: 750px) {
+      padding: 32px 0;
+      background-image: url('../img/bg_footer-recruit-sp.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    @media screen and (max-width: 494px) {
+      padding: 32px 0;
+      background-image: url('../img/bg_footer-recruit-sp.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 494px 338px;
+    }
+    @include g.mq(sp){
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+      // transition: all 0.3s ease-in-out;
+
+    }
+  }
+  &__apply--sp{
+    @include g.mq(pc) {
+      display: none;
+    }
+    @include g.mq(sp) {
+      
+    }
+  }
+  &__apply--ttl{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    color: g.$white;
+    margin-bottom: 14px;
+    @include g.font-rem(44);
+    text-align: center;
+  }
+  &__apply--subttl{
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400; //Regular
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    color: g.$white;
+    text-align: center;
+    @include g.font-rem(14);
+  }
+  &__apply--new{
+    @include g.mq(pc) {
+      margin-right: 10px;
+    }
+    @include g.mq(sp) {
+      margin: 32px auto 16px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__apply--mid{
+    @include g.mq(sp) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__modal{
+    @include g.mq(sp){
+      height: calc(100dvh - 59px);
+      height: calc(100vh - 59px);
+      width: 100vw;
+      background: #FFF;
+      z-index: 3;
+      visibility: hidden;
+      position: fixed;
+      transition: all .2s ease-in-out;
+      top: 59px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      &.is-checked{
+        visibility: visible;
+        
+      }
+    }
+  }
+  &__modal--inner{
+    @include g.mq(pc){
+      display: flex;
+    }
+    @include g.mq(sp){
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+  }
+}
+
+
+
+// body {
+//   animation: bugfix infinite 1s;
+//   -webkit-animation: bugfix infinite 1s;
+// }
+
+// @keyframes bugfix {
+//   from {
+//     padding: 0;
+//   }
+//   to {
+//     padding: 0;
+//   }
+// }
+// @-webkit-keyframes bugfix {
+//   from {
+//     padding: 0;
+//   }
+//   to {
+//     padding: 0;
+//   }
+// }
+
+
+#header__modal-input {
+  display: none; 
+}
+
+.l-header__btn{
+  @include g.mq(pc){
+    display: none;
+  }
+  @include g.mq(sp){
+    position: fixed;
+    right: 0;
+    top: 0  ;
+  }
+  &.active{
+    background: transparent;
+
+
+    & ~ #header__modal{
+      visibility: visible;
+
+    }
+  }
+}
+
+body {
+
+  animation: bugfix infinite 1s;
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
