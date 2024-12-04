@@ -1,0 +1,42 @@
+@use "../../global/" as g;
+
+.c-paragraph{
+  &__error{
+    @include g.mq(pc){
+      margin: 0 auto 64px;
+      img{
+        width: auto;
+        height: 50px;
+        margin: 0 auto 32px;
+        display: block;
+      }
+    }
+    @include g.mq(sp){
+      margin: 0 auto 11.4vw;
+      img{
+        width: auto;
+        height: 40px;
+        margin: 0 auto 24px;
+        display: block;
+      }
+    }
+
+  }
+  &__error--btn{
+    @include g.mq(pc){
+      margin: 56px auto 0;
+    }
+    @include g.mq(sp){
+      margin: 40px auto 0;
+    }
+  }
+  &__text{
+    @include g.mq(pc){
+      margin: 0 auto 40px;
+    }
+    @include g.mq(sp){
+      margin: 0 auto 24px;
+    }
+  }
+
+}

@@ -100,11 +100,9 @@
     max-width: 100%;
     @include g.mq(pc){
       @include g.font-rem(16);
-      margin-bottom: 32px;
     }
     @include g.mq(sp){
       @include g.font-rem(24);
-      margin-bottom: 21px;
     }
   }
   &__txt{
@@ -123,9 +121,13 @@
     height: 16px;
     @include g.mq(pc){
       @include g.font-rem(14);
+      margin-top: 32px;
+
     }
     @include g.mq(sp){
       @include g.font-rem(14);
+      margin-top: 21px;
+
     }
   }
   &__block{

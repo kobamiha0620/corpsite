@@ -7,9 +7,9 @@
   <title><% if(pageinit.pagename){ %><%= pageinit.pagename %> | <% } %><%= pageinit.title %></title>
 
   <link rel="canonical" href="https://leverages.jp/" />
-  <link rel="icon" href="./img/favicon.ico">
+  <link rel="icon" href="<%= pageinit.path %>img/favicon.ico">
   <!-- iOS Safari and Chrome -->
-  <link rel="apple-touch-icon" sizes="192x192" href="/img/touch-icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="<%= pageinit.path %>img/touch-icon.png">
 
   <meta property="og:title" content="<%= pageinit.title %>" />
   <meta property="og:description" content="<%= pageinit.description %>" />
@@ -39,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <!-- Font -->
 
-  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <link rel="stylesheet" href="<%= pageinit.path %>css/style.css" type="text/css">
 
 
 </head>

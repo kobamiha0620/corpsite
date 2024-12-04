@@ -1,0 +1,54 @@
+@use "../../global/" as g;
+
+.c-tile{
+  &__service{
+    background-color: #FFF;
+    @include g.mq(pc){
+      width: 48.8%;
+    }
+    @include g.mq(sp){
+      width: 100%;
+    }
+    img{
+      object-fit: cover;
+      @include g.mq(pc){
+        height: 200px;
+        width: 100%;
+      }
+      @include g.mq(sp){
+      }
+    }
+    &.mbtile{
+      @include g.mq(sp){
+        margin-bottom: 6.8vw;  
+      }
+    }
+  }
+  &__service--ttl{
+    font-family: "Noto Sans JP", serif;
+    font-weight: bold;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+
+    @include g.mq(pc) {
+      @include g.font-rem(16);
+      margin-bottom: 8px;
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+      margin-bottom: 8px;
+    }
+
+  }
+  &__service--txtblc{
+    @include g.mq(pc) {
+      padding: 24px 20px;
+    } 
+
+    @include g.mq(sp) {
+      padding: 5.7vw g.$spPadding;
+    }
+
+  }
+}

@@ -30,11 +30,10 @@
       <div class="l-header__modal--inner">
         <nav class="l-header__nav" id="header__nav">
           <ul class="l-header__nav--item--list">
-            <li><a href="/" class="l-header__nav--item"><span class="pc">TOP</span><span class="sp">トップページ</span></a>
-            </li>
-            <li><a href="/conmany/" class="l-header__nav--item">会社概要</a></li>
-            <li><a href="/environment/" class="l-header__nav--item">働く環境</a></li>
-            <li><a href="/contact/" class="l-header__nav--item">お問い合わせ</a></li>
+            <li><a href="<%= pageinit.path %>" class="l-header__nav--item"><span class="pc">TOP</span><span class="sp">トップページ</span></a></li>
+            <li><a href="<%= pageinit.path %>company/" class="l-header__nav--item">会社概要</a></li>
+            <li><a href="<%= pageinit.path %>environment/" class="l-header__nav--item">働く環境</a></li>
+            <li><a href="<%= pageinit.path %>contact/" class="l-header__nav--item">お問い合わせ</a></li>
           </ul>
         </nav>
 
@@ -45,7 +44,7 @@
             <p class="l-header__apply--subttl">新卒採用 スタート</p>
           </div>
           <div class="l-header__apply--new">
-            <a href="/recruit/graduates/" class="c-button__recruit--header">
+            <a href="<%= pageinit.path %>recruit/graduates/" class="c-button__recruit--header">
               <span class="c-button__recruit--header-txt">新卒採用</span>
               <span class="c-button__recruit--header-arrow"></span>
             </a>

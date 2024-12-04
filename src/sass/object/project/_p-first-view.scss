@@ -1,5 +1,27 @@
 @use "../../global/" as g;
 
 .p-first-view{
-  
+  &__intro{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &.company{
+      background-image: url('../img/bg_ttl-company.jpg');
+    }
+    &.environment{
+      background-image: url('../img/bg_ttl-environment.jpg');
+    }
+    @include g.mq(pc){
+      padding: 72px 0;
+    }
+    @include g.mq(sp){
+      padding: 16vw 0;
+    }
+  }
+  // &__intro--textblc{
+    
+  // }
 }

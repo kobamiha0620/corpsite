@@ -1,5 +1,55 @@
 @use "../global/" as g;
 
 .l-wrapper{
-  
+  &__containts{
+    background-color: g.$white;
+    @include g.mq(pc) {
+      width: 100%;
+      padding: 80px 100px;
+      margin-top: 80px;
+    }
+    @include g.mq(sp) {
+      padding: 11.5vw g.$spPadding;
+      margin-top: 60px;
+    }
+  }
+  &__noindex{
+    @include g.mq(pc) {
+      max-width: g.$pcInner;
+      width: 100%;
+      margin: 0 auto;
+      padding: g.$pcPaddingD g.$pcPadding 20px;
+    }
+    @include g.mq(sp) {
+      width: 100%;
+      margin: 0 auto;
+      padding: g.$spPaddingD g.$spPadding 0;
+    }
+  }
+  &__block{
+    @include g.mq(pc) {
+      padding: 80px 0;
+    }
+    @include g.mq(sp) {
+      padding: 17vw 0;
+    }
+
+  }
+  &__intro{
+    @include g.mq(pc) {
+      max-width: g.$pcInner;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 g.$pcPadding;
+    }
+    @include g.mq(sp) {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+  &__outmargin{
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
 }

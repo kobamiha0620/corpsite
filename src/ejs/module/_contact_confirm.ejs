@@ -1,0 +1,132 @@
+<section class="p-contact inner">
+  <div class="l-wrapper__containts">
+    <h3 class="u-text__h2 u-margin__ttl-en">Contact Form</h3>
+    <p class="u-text__subttl-jp">ご入力内容をご確認ください</p>
+    <div class="p-contact__textwrap">
+      <p class="u-text__maintxt">ご入力内容に間違いがないかご確認のうえ、<br>
+        「送信する」を選択してお問い合わせ申込を完了してください。<br>
+        訂正する場合は「戻る」を選択してください。</p>
+    </div>
+
+    <form action="<%= pageinit.action %>" method="POST" id="mG61Hd" class="mailform" target="hidden_iframe"
+      onsubmit="submitted=true;">
+
+      <div class="p-contact__table">
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">氏名<span class="red">※</span></p>
+          </div>
+
+          <div class="p-contact__td">
+
+            <div class="p-contact__td--inner">
+              <p class="p-contact__td--label">姓：</p>
+              <?php echo $_POST['entry_<%= pageinit.lastName %>']; ?>
+              <input type="hidden" id="contact-lastname" class="p-contact__td--small p-contact__td--input"
+                name="entry.<%= pageinit.lastName %>" value="<?php echo $_POST['entry_<%= pageinit.lastName %>']; ?>">
+            </div>
+
+            <div class="p-contact__td--inner">
+              <p class="p-contact__td--label">名：</p>
+
+                <?php echo $_POST['entry_<%= pageinit.firstName %>']; ?>
+                <input type="hidden" id="contact-firstName" class="p-contact__td--input" name="entry.<%= pageinit.firstName %>"
+                  value="<?php echo $_POST['entry_<%= pageinit.firstName %>']; ?>">
+
+            </div>
+
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">氏名（カナ）<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--inner">
+              <p class="p-contact__td--label">姓（カナ）：</p>
+                <?php echo $_POST['entry_<%= pageinit.lastNameKana %>']; ?>
+                <input type="hidden" id="contact-lastNameKana" class="p-contact__td--input" name="entry.<%= pageinit.lastNameKana %>"
+                  value="<?php echo $_POST['entry_<%= pageinit.lastNameKana %>']; ?>">
+
+            </div>
+            <div class="p-contact__td--inner">
+              <p class="p-contact__td--label">名（カナ）：</p>
+
+                <?php echo $_POST['entry_<%= pageinit.firstNamekana %>']; ?>
+                <input type="hidden" id="contact-firstNamekana" class="p-contact__td--input" name="entry.<%= pageinit.firstNamekana %>"
+                  value="<?php echo $_POST['entry_<%= pageinit.firstNamekana %>']; ?>">
+            </div>
+
+          </div>
+
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">電話番号<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <?php echo $_POST['entry_<%= pageinit.tel %>']; ?>
+            <input type="hidden" id="contact-phone" class="p-contact__td--input" name="entry.<%= pageinit.tel %>"
+              value="<?php echo $_POST['entry_<%= pageinit.tel %>']; ?>">
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">メールアドレス<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <?php echo $_POST['entry_<%= pageinit.mail %>']; ?>
+            <input type="hidden" id="contact-email" class="p-contact__td--input" name="entry.<%= pageinit.mail %>"
+              value="<?php echo $_POST['entry_<%= pageinit.mail %>']; ?>">
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">お問い合わせ内容<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td--noflex">
+            <?php echo $_POST['entry_<%= pageinit.context %>']; ?>
+            <input type="hidden" id="contact-comment" class="p-contact__td--input p-contact__td--textarea"
+              name="entry.<%= pageinit.context %>" value="<?php echo $_POST['entry_<%= pageinit.context %>']; ?>">
+          </div>
+        </div><!--  /.p-contact__tr -->
+        
+      </div><!--  /.p-contact__table -->
+
+      <div class="p-contact__agree">
+        <label>
+          <input class="p-contact__agree--hidden" type="checkbox" name="policy" value="プライバシーポリシーに同意する"
+            id="contact__agree" checked>
+          <span class="p-contact__agree--link"><a href="https://leverages.jp/privacypolicy" target="_blank"
+              rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span><span
+              class="pc">に同意する</span></span>
+        </label>
+      </div>
+
+      <div class="c-button__common--wrapper">
+        <button type="submit" name="submit" value="送信" class="c-button__common" id="button__submit">送信する</button>
+      </div>
+
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/contact/thanks/';}"></iframe>
+      <!-- <script type="text/javascript">let submitted = false;</script> -->
+    </form>
+
+    <div class="sp">
+      <div class="p-contact__returnbtn">
+        <button class="c-button__return" type="button" name="button" onclick="history.back()">
+          <span>戻る</span>
+        </button> 
+      </div>
+
+    </div>
+
+
+
+
+  
+  </div>
+</section>

@@ -1,0 +1,228 @@
+@use "../../global/" as g;
+
+.p-contact{
+  &__textwrap{
+    @include g.mq(pc){
+      margin: 80px 0;
+    }
+    @include g.mq(sp){
+      margin: 40px 0 56px;
+    }
+  }
+  &__input-ttl{
+    font-weight: 700;
+    line-height: 100%;
+    span{
+      margin-left: 0.3em;
+      display: inline-block;
+    }
+    @include g.mq(pc){
+      @include g.font-rem(16);
+    }
+    @include g.mq(sp){
+      @include g.font-rem(14);
+      margin-bottom: 24px;
+    }
+    &.adjustment{
+      @include g.mq(pc){
+        padding-bottom: 2em;
+      }
+    }
+  }
+
+  &__table{
+
+  }
+  &__tr{
+    @include g.mq(pc){
+      display: flex;
+      align-items: center;
+      margin: 0 0 32px;
+    }
+
+  }
+  &__th{
+    @include g.mq(pc){
+      max-width: 200px;
+      min-width: 150px;
+      width: 100%;
+    }
+
+  }
+  &__td{
+    width: 100%;
+    @include g.mq(pc){
+      display: flex;
+      align-items: center;
+
+    }
+    @include g.mq(sp){
+      display: block;
+      margin-bottom: 40px;
+    }
+  }
+  &__td--input{
+    line-height: 100%;
+    border: 1px solid g.$line;
+    outline: none;
+    width: 100%;
+    @include g.mq(pc){
+      padding: 1em;
+      @include g.font-rem(16);
+    }
+    @include g.mq(sp){
+      padding: 1em;
+      @include g.font-rem(14);
+    }
+    &::placeholder{
+      color: g.$txt;
+    }
+
+  }
+  &__td--small{
+    @include g.mq(pc){
+      max-width: 180px;
+      min-width: 180px;
+      width: 100%;
+    }
+    @include g.mq(sp){
+      width: 100%;
+    }
+  }
+  &__td--inner{
+    display: flex;
+    align-items: center;
+    @include g.mq(pc){
+      width: 100%;
+    }
+    @include g.mq(sp){
+      margin-bottom: 16px;
+    }
+  }
+  &__td--label{
+    white-space: nowrap;
+    margin-right: 1em;
+    @include g.mq(sp){
+      max-width: 5em;
+      min-width: 5em;
+    }
+
+  }
+  &__td--textarea{
+    @include g.mq(pc){
+      height: 172px;
+    }
+    @include g.mq(sp){
+      height: 172px;
+    }
+  }
+  &__td--noflex{
+    width: 100%;
+  }
+  &__note{
+    font-weight: 400;
+    line-height: 100%;
+    @include g.mq(pc){
+      @include g.font-rem(14);
+      margin-top: 16px;
+    }
+    @include g.mq(sp){
+      @include g.font-rem(12);
+      margin-top: 16px;
+    }
+  }
+  &__agree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include g.mq(pc){
+      margin-bottom: 24px;
+    }
+    @include g.mq(sp){
+      margin-bottom: 20px;
+      margin: 16vw 0 5.7vw;
+    }
+  }
+  &__agree--hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    &:checked+.p-contact__agree--link::before{
+      background-color: #1F3134;
+      border: 1px solid #1F3134;
+
+    }
+    &:checked+.p-contact__agree--link::after{
+      opacity: 1;
+    }
+  }
+  &__agree--link{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0 5px 36px;
+    position: relative;
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 100%;
+    @include g.mq(pc){
+      @include g.font-rem(16);
+    }
+    @include g.mq(sp){
+      @include g.font-rem(14);
+    }
+    a{
+      text-decoration: none;
+      border-bottom: solid 1px #000;
+    }
+    &::before{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      border: 1px solid #1F3134;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 7px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      left: 1px;
+      transform: rotate(35deg) skewY(16deg) translateY(-50%);
+      transform-origin: center right;
+      border-right: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF;
+      opacity: 0;    
+    }
+
+  }
+  &__agree--linkimg{
+    display: inline-block;
+    background-image: url('../img/img_link.png');
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    margin:0 3px;
+    width: 10px;
+    height: 10px;
+  }
+  &__returnbtn{
+    @include g.mq(sp){
+      margin-top: 24px;
+      padding: 0 6.5vw;
+    }
+
+  }
+}

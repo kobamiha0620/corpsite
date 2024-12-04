@@ -1,0 +1,22 @@
+@use "../../global/"as g;
+
+.p-maintenance {
+  &__schedule--wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  &__schedule{
+    border: solid 1px g.$line;
+    display: inline-block;
+    @include g.mq(pc) {
+      padding: 40px;
+      margin: 0 auto 24px;
+    }
+  
+    @include g.mq(sp) {
+      padding: 24px 16px;
+      margin: 0 auto 24px;
+    }
+  }
+  
+}

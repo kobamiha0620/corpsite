@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://leverages.jp/" />
   <link rel="icon" href="./img/favicon.ico">
   <!-- iOS Safari and Chrome -->
-  <link rel="apple-touch-icon" sizes="192x192" href="/img/touch-icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="./img/touch-icon.png">
 
   <meta property="og:title" content="レバレジーズスタッフィング株式会社" />
   <meta property="og:description" content="レバレジーズスタッフィング株式会社のコーポレートサイトです。会社概要・採用情報などについて紹介しています。" />
@@ -50,7 +50,7 @@
 
 
 
-<body id="toppage">
+<body id="home">
   <!-- 全ページ共通 -->
   <div class="wrapper">
     <header class="l-header" id="header">
@@ -85,11 +85,10 @@
       <div class="l-header__modal--inner">
         <nav class="l-header__nav" id="header__nav">
           <ul class="l-header__nav--item--list">
-            <li><a href="/" class="l-header__nav--item"><span class="pc">TOP</span><span class="sp">トップページ</span></a>
-            </li>
-            <li><a href="/conmany/" class="l-header__nav--item">会社概要</a></li>
-            <li><a href="/environment/" class="l-header__nav--item">働く環境</a></li>
-            <li><a href="/contact/" class="l-header__nav--item">お問い合わせ</a></li>
+            <li><a href="./" class="l-header__nav--item"><span class="pc">TOP</span><span class="sp">トップページ</span></a></li>
+            <li><a href="./company/" class="l-header__nav--item">会社概要</a></li>
+            <li><a href="./environment/" class="l-header__nav--item">働く環境</a></li>
+            <li><a href="./contact/" class="l-header__nav--item">お問い合わせ</a></li>
           </ul>
         </nav>
 
@@ -100,7 +99,7 @@
             <p class="l-header__apply--subttl">新卒採用 スタート</p>
           </div>
           <div class="l-header__apply--new">
-            <a href="/recruit/graduates/" class="c-button__recruit--header">
+            <a href="./recruit/graduates/" class="c-button__recruit--header">
               <span class="c-button__recruit--header-txt">新卒採用</span>
               <span class="c-button__recruit--header-arrow"></span>
             </a>
@@ -121,10 +120,9 @@
 </header>
     <!-- 全ページ共通 -->
 
-    <!-- Here is our page's main content -->
     <main class="l-main" id="main">
-
-      <section class="p-home__fv" id="home__fv">
+      <!-- 各ページ -->
+            <section class="p-home__fv" id="home__fv">
 
         <!-- PC限定 -->
         <div class="p-home__kv" id="home__kv">
@@ -186,7 +184,7 @@
       </section>
 
       <section class="p-home__bnrlink inner" id="home__bnrlink">
-        <a class="c-bnrlink" href="./company/" target="_blank">
+        <a class="c-bnrlink" href=".//company/" target="_blank">
           <div class="c-bnrlink__block">
             <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
             <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
@@ -194,7 +192,7 @@
           </div>
           <div class="c-bnrlink__bg company"></div>
         </a>
-        <a class="c-bnrlink c-multi" href="./environment/" target="_blank">
+        <a class="c-bnrlink c-multi" href=".//environment/" target="_blank">
           <div class="c-bnrlink__block">
             <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
             <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
@@ -203,8 +201,7 @@
           <div class="c-bnrlink__bg environment"></div>
         </a>
       </section>
-
-
+      <!-- 各ページ -->
     </main>
 
     <!-- 全ページ共通 -->
@@ -217,7 +214,7 @@
     </div>
     <div class="l-recruit-footer__wrapper-button">
       <div class="l-recruit-footer__button">
-        <a href="/recruit/graduates/" target="_blank" rel="noreferrer" class="c-button__recruit">
+        <a href="./recruit/graduates/" target="_blank" rel="noreferrer" class="c-button__recruit">
           <span class="c-button__recruit--txt">新卒採用</span>
           <span class="c-button__recruit--arrow"></span>
         </a>
@@ -236,7 +233,7 @@
     <div class="l-footer__container">
       <div class="l-footer__block">
         <a href="/" class="l-footer__logo">
-          <object type="image/svg+xml" data="./img/logo_footer.svg" width="100" height="49"></object>
+          <img src="./img/logo_footer.svg" width="100" height="49" alt="Leverages stuffing" />
         </a>
         <ul class="l-footer__policy">
           <li class="l-footer__policy--item"><a href="https://leverages.jp/privacypolicy/" target="_blank" rel="noreferrer">PRIVACY POLICY</a></li>
@@ -275,8 +272,9 @@
   </div>
   <!-- /.wrapper -->
 
-  <script type="text/javascript" src="./js/common.js"></script>
+  <script type="text/javascript" src="./js/home.js"></script>
   <!-- 全ページ共通 -->
+
 
 </body>
 

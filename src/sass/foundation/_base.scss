@@ -37,10 +37,9 @@ main {
     padding: 0 g.$pcPadding;
   }
   @include g.mq(sp) {
-    padding: 0 16px;
+    padding: 0 g.$spPadding;
     width: 100%;
     margin: 0 auto;
-
   }
 }
 
@@ -60,4 +59,11 @@ main {
   @include g.mq(sp) {
     display: block;
   }
+}
+
+.center{
+  text-align: center;
+}
+.red{
+  color: g.$red;
 }

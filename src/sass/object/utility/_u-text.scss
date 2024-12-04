@@ -40,7 +40,6 @@
 
     @include g.mq(sp) {
       @include g.font-rem(32);
-
     }
   }
 
@@ -156,7 +155,7 @@
   //太字
   &__bold {
     font-family: "Noto Sans JP", serif;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 180%;
     letter-spacing: 0.03em;
 
@@ -228,6 +227,59 @@
 
     @include g.mq(sp) {
       @include g.font-rem(14);
+    }
+  }
+
+  &__error{
+    &--ttl{
+      text-align: center;
+      font-weight: 300;
+      font-family: "Open Sans", sans-serif;
+      line-height: 100%;
+      color: g.$txt;
+      @include g.mq(pc) {
+        @include g.font-rem(60);
+      }
+      @include g.mq(sp) {
+        @include g.font-rem(32);
+      }
+    }
+  }
+  //会社概要
+  &__profile--ttl {
+    font-family: "Noto Sans JP", serif;
+    font-weight: bold;
+    line-height: 100%;
+
+    @include g.mq(pc) {
+      @include g.font-rem(16);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+    }
+  }
+  &__profile--txt {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 160%;
+    @include g.mq(pc) {
+      @include g.font-rem(16);
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+    }
+  }
+  &__profile--note {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    line-height: 100%;
+    
+    @include g.mq(pc) {
+      @include g.font-rem(12);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(10);
     }
   }
 }
