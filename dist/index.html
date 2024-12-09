@@ -23,21 +23,10 @@
   <meta property="og:site_name" content="レバレジーズスタッフィング株式会社" />
   <meta name="apple-mobile-web-app-title" content="Leverages Staffing">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#E9092C" />
+  <meta name="theme-color" content="#FFFFFF" />
 
 
   <!-- Font -->
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'qmd3kbn',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -58,37 +47,17 @@
     <div class="l-header__spinner">
       <h1 class="l-header__logo"><a href="/">Leverages Staffing | レバジーズスタッフィング </a></h1>
     </div>
-
-    <!-- Second Menu -->
-    <!-- <div class="c-button__modal l-header__btn" id="header__btn" onclick="this.classList.toggle('active')"> 
-    <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
-      
-      <path class="line line1" d="M 50,65 H 70 C 70,65 75,65.198488 75,70.762712 C 75,73.779026 74.368822,78.389831 66.525424,78.389831 C 22.092231,78.389831 -18.644068,-30.508475 -18.644068,-30.508475" />
-      <path class="line line2" d="M 50,35 H 70 C 70,35 81.355932,35.300135 81.355932,25.635593 C 81.355932,20.906215 78.841706,14.830508 72.881356,14.830508 C 35.648232,14.830508 -30.508475,84.322034 -30.508475,84.322034" />
-      <path class="line line3" d="M 50,50 H 30 C 30,50 12.288136,47.749959 12.288136,60.169492 C 12.288136,67.738339 16.712974,73.305085 40.677966,73.305085 C 73.791674,73.305085 108.47458,-19.915254 108.47458,-19.915254" />
-      <path class="line line4" d="M 50,50 H 70 C 70,50 81.779661,50.277128 81.779661,36.607372 C 81.779661,28.952694 77.941689,25 69.067797,25 C 39.95532,25 -16.949153,119.91525 -16.949153,119.91525" />
-      <path class="line line5" d="M 50,65 H 30 C 30,65 17.79661,64.618439 17.79661,74.152543 C 17.79661,80.667556 25.093813,81.355932 38.559322,81.355932 C 89.504001,81.355932 135.59322,-21.186441 135.59322,-21.186441" />
-      <path class="line line6" d="M 50,35 H 30 C 30,35 16.525424,35.528154 16.525424,24.152542 C 16.525424,17.535987 22.597755,13.559322 39.40678,13.559322 C 80.617882,13.559322 94.067797,111.01695 94.067797,111.01695" />
-    </svg>
-
-    <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
-      <path class="line" d="M 34,32 L 66,68" />
-      <path class="line" d="M 66,32 L 34,68" />
-    </svg>
-  </div> -->
-
     <input type="checkbox" id="button__header-sp" class="c-button__header-spinput" />
     <label for="button__header-sp" id="button__header-labelsp" class="c-button__header-sp"><span></span></label>
-
 
     <div class="l-header__modal" id="header__modal">
       <div class="l-header__modal--inner">
         <nav class="l-header__nav" id="header__nav">
           <ul class="l-header__nav--item--list">
-            <li><a href="./" class="l-header__nav--item"><span class="pc">TOP</span><span class="sp">トップページ</span></a></li>
-            <li><a href="./company/" class="l-header__nav--item">会社概要</a></li>
-            <li><a href="./environment/" class="l-header__nav--item">働く環境</a></li>
-            <li><a href="./contact/" class="l-header__nav--item">お問い合わせ</a></li>
+            <li class="l-header__nav--item--home"><a href="./" class="l-header__nav--item"><span class="pc">TOP</span><span class="sp">トップページ</span></a></li>
+            <li class="l-header__nav--item--company"><a href="./company/" class="l-header__nav--item">会社概要</a></li>
+            <li class="l-header__nav--item--environment"><a href="./environment/" class="l-header__nav--item">働く環境</a></li>
+            <li class="l-header__nav--item--contact"><a href="./contact/" class="l-header__nav--item">お問い合わせ</a></li>
           </ul>
         </nav>
 
@@ -105,9 +74,13 @@
             </a>
           </div>
           <div class="l-header__apply--mid">
-            <span class="c-button__midcarrer--header">
-              中途採用
+            <span class="c-button__recruit--header disabled">
+            <!-- <a href="< %= pageinit.path recruit/mid-career/" class="c-button__recruit--header"> -->
+
+              <span class="c-button__recruit--header-txt">中途採用</span>
+              <span class="c-button__recruit--header-arrow"></span>
             </span>
+
           </div>
         </div>
 
@@ -128,11 +101,11 @@
         <div class="p-home__kv" id="home__kv">
           <div class="p-home__kv--wrapper">
             <picture class="p-home__kv--img">
-              <source srcset="./img/kv_home-pc.webp" type="image/webp" />
-              <img src="./img/kv_home-pc.jpg" alt="つながりは誰かを支える" width="2252" height="1506" />
+              <source srcset="./img/fv_home-pc.webp" type="image/webp" />
+              <img src="./img/fv_home-pc.jpg" alt="つながりは誰かを支える" width="2800" height="2259" />
             </picture>
           </div>
-          <div class="p-home__scroll">
+          <div class="p-home__scroll" id="js-homeScroll">
             <div class="p-home__scroll--wrapper">
               <p class="p-home__scroll--text u-text__opensans">SCROLL</p>
               <div class="p-home__scroll--line"></div>
@@ -141,40 +114,97 @@
         </div>
         <!-- PC限定 -->
 
-
-        <div class="p-home__aboutus inner">
-          <!-- SP限定 -->
-           <div class="p-home__aboutus--kv">
-            <picture class="p-home__kv--img">
-              <source srcset="./img/kv_home-sp.webp" type="image/webp" />
-              <img src="./img/kv_home-sp.jpg" alt="つながりは誰かを支える" width="1125" height="1125" />
-            </picture>
-           </div>
-
-          <!-- SP限定 -->
-
-          <div class="p-home__feature" id="js-homefeature">
-            <div class="p-home__feature--pfirst">
-              <p class="p-home__feature--text">つ</p>
-              <p class="p-home__feature--text">な</p>
-              <p class="p-home__feature--text">が</p>
-              <p class="p-home__feature--text">り</p>
-              <p class="p-home__feature--text">は</p>
-            </div>
-            <div class="p-home__feature--psecond">
-              <p class="p-home__feature--text-later">誰</p>
-              <p class="p-home__feature--text-later">か</p>
-              <p class="p-home__feature--text-later">を</p>
-              <p class="p-home__feature--text-later">支</p>
-              <p class="p-home__feature--text-later">え</p>
-              <p class="p-home__feature--text-later">る</p>
-            </div>
+        <!-- 文字部分 -->
+        <div class="p-home__feature" id="fixLetters">
+          <div class="p-home__feature--pfirst">
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="./img/fv_letter01.webp" type="image/webp" />
+                <img src="./img/fv_letter01.jpg" alt="つ" width="216" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="./img/fv_letter02.webp" type="image/webp" />
+                <img src="./img/fv_letter02.jpg" alt="な" width="204" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="./img/fv_letter03.webp" type="image/webp" />
+                <img src="./img/fv_letter03.jpg" alt="が" width="225" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="./img/fv_letter04.webp" type="image/webp" />
+                <img src="./img/fv_letter04.jpg" alt="り" width="184" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="./img/fv_letter05.webp" type="image/webp" />
+                <img src="./img/fv_letter05.jpg" alt="は" width="228" height="288">
+              </picture>
+            </p>
           </div>
+          <div class="p-home__feature--psecond">
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="./img/fv_letter06.webp" type="image/webp" />
+                <img src="./img/fv_letter06.jpg" alt="誰" width="222" height="288">
+              </picture>
+            </p>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="./img/fv_letter07.webp" type="image/webp" />
+                <img src="./img/fv_letter07.jpg" alt="か" width="207" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="./img/fv_letter08.webp" type="image/webp" />
+                <img src="./img/fv_letter08.jpg" alt="を" width="191" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="./img/fv_letter09.webp" type="image/webp" />
+                <img src="./img/fv_letter09.jpg" alt="支" width="218" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="./img/fv_letter10.webp" type="image/webp" />
+                <img src="./img/fv_letter10.jpg" alt="え" width="203" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="./img/fv_letter11.webp" type="image/webp" />
+                <img src="./img/fv_letter11.jpg" alt="る" width="221" height="288">
+              </picture>
+            </p>
+          </div>
+        </div>
+        <!-- 文字部分 -->
 
-          <div class="p-home__aboutus--inner inner">
+
+        <div class="p-home__aboutus" id="home__aboutus">
+          <!-- SP限定 -->
+          <div class="p-home__aboutus--kv">
+            <picture class="p-home__kv--img">
+              <source srcset="./img/fv_home-sp.webp" type="image/webp" />
+              <img src="./img/fv_home-sp.jpg" alt="つながりは誰かを支える" width="1500" height="1500" />
+            </picture>
+          </div>
+          <!-- SP限定 -->
+
+          <div class="p-home__aboutus--inner">
             <h2 class="u-text__h2 u-margin__ttl-en">About Us</h2>
-            <p class="u-text__subttl-jp u-margin__subttl-jp" id="home__aboutus">レバレジーズスタッフィングとは</p>
-            <p class="u-text__text u-margin__text">レバレジーズスタッフィングはレバレジーズのグループ会社です。<br>
+            <p class="u-text__subttl-jp u-margin__subttl-jp">レバレジーズスタッフィングとは</p>
+            <p class="u-text__text u-margin__text" id="js-aboutHight">レバレジーズスタッフィングはレバレジーズのグループ会社です。<br>
               人材派遣サービス企業で、現在は看護師人材派遣サービス「レバウェル看護」、介護士人材派遣サービス「レバウェル介護」等を提供しています。</p>
             <p class="u-text__text">
               「自分たちの仕事によって、困っている誰かがプラスの感情になる」そんな事業づくりをしてます。<br>今後も人材不足や社会課題となって困っている業界があれば、社会の課題解決をしていきます。</p>
@@ -184,47 +214,78 @@
       </section>
 
       <section class="p-home__bnrlink inner" id="home__bnrlink">
-        <a class="c-bnrlink" href=".//company/" target="_blank">
-          <div class="c-bnrlink__block">
-            <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
-            <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
-            <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
-          </div>
-          <div class="c-bnrlink__bg company"></div>
-        </a>
-        <a class="c-bnrlink c-multi" href=".//environment/" target="_blank">
-          <div class="c-bnrlink__block">
-            <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
-            <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
-            <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
-          </div>
-          <div class="c-bnrlink__bg environment"></div>
-        </a>
+
+        <div class="c-bnrlink__wrapper">
+          <span class="c-bnrlink__line">
+            <a class="c-bnrlink" href="./company/">
+              <div class="c-bnrlink__block">
+                <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
+                <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
+                <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+              </div>
+              <div class="c-bnrlink__bg company"></div>
+            </a>
+          </span>
+        </div>
+
+
+        <div class="c-bnrlink__wrapper">
+          <span class="c-bnrlink__line">
+            <div class="c-bnrlink__contents--wrapper">
+              <a class="c-bnrlink c-multi" href="./environment/">
+                <div class="c-bnrlink__block">
+                  <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
+                  <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
+                  <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+                </div>
+                <div class="c-bnrlink__bg environment"></div>
+              </a>
+
+            </div>
+
+          </span>
+        </div>
+
       </section>
       <!-- 各ページ -->
     </main>
 
     <!-- 全ページ共通 -->
     <section class="l-recruit-footer" id="recruit-footer">
-  
-  <div class="l-recruit-footer__inner inner">
-    <div class="l-recruit-footer__wrapper-ttl">
-      <h2 class="l-recruit-footer__ttl">JOIN US!</h2>
-      <p class="l-recruit-footer__subttl">新卒採用 スタート</p>
-    </div>
-    <div class="l-recruit-footer__wrapper-button">
-      <div class="l-recruit-footer__button">
-        <a href="./recruit/graduates/" target="_blank" rel="noreferrer" class="c-button__recruit">
-          <span class="c-button__recruit--txt">新卒採用</span>
-          <span class="c-button__recruit--arrow"></span>
-        </a>
-      </div>
-      <div class="l-recruit-footer__button">
-        <span class="c-button__midcarrer">中途採用</span>
-      </div>
-
+  <div class="l-recruit-footer__imgblc">
+    <div class="l-recruit-footer__imgblc--relative">
+      <picture>
+        <source srcset="./img/bg_footer-recruit-pc.webp" type="image/webp" />
+        <img src="./img/bg_footer-recruit-pc.jpg" alt="JOIN US" width="1302" height="845">
+      </picture>
     </div>
   </div>
+
+
+  <div class="l-recruit-footer__contents">
+    <div class="l-recruit-footer__inner inner">
+      <div class="l-recruit-footer__wrapper-ttl">
+        <h2 class="l-recruit-footer__ttl">JOIN US!</h2>
+        <p class="l-recruit-footer__subttl">新卒採用 スタート</p>
+      </div>
+      <div class="l-recruit-footer__wrapper-button">
+        <div class="l-recruit-footer__button">
+          <a href="./recruit/graduates/" target="_blank" rel="noreferrer" class="c-button__recruit">
+            <span class="c-button__recruit--txt">新卒採用</span>
+            <span class="c-button__recruit--arrow"></span>
+          </a>
+        </div>
+        <div class="l-recruit-footer__button">
+          <span class="c-button__recruit disabled">
+            <span class="c-button__recruit--txt">中途採用</span>
+            <span class="c-button__recruit--arrow"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </section>
     
 
@@ -241,25 +302,24 @@
           <li class="l-footer__policy--item"><a href="https://leverages.jp/informativedata" target="_blank" rel="noreferrer">INFORMATIVE DATA</a></li>
         </ul>
       </div>
-      <div class="l-footer__block">
-        <ul class="l-footer__nav">
-          <li class="l-footer__nav--item">レバレジーズオフィスサポート株式会社</li>
-          <li class="l-footer__nav--item"><a href="https://leverages-medicalcare.jp/" target="_blank" rel="noreferrer">レバレジーズメディカルケア株式会社</a></li>
-          <li class="l-footer__nav--item"><a href="https://lc-mexico.com/" target="_blank" rel="noreferrer">Leverages Career Mexico S.A. de C.V.</a></li>
-          <li class="l-footer__nav--item">Leverages Career India Pvt. Ltd.</li>
-          <li class="l-footer__nav--item">Leverages U.S. Inc.</li>
-        </ul>
-      </div>
-      <div class="l-footer__block">
-        <ul class="l-footer__nav">
-          <li class="l-footer__nav--item"><a href="https://levtech.jp/" target="_blank" rel="noreferrer">レバテック株式会社</a></li>
-          <li class="l-footer__nav--item"><a href="https://leveragesma.jp/" target="_blank" rel="noreferrer">レバレジーズM&Aアドバイザリー株式会社</a></li>
-          <li class="l-footer__nav--item"><a href="https://vn.leveragescareer.com/?lang=ja" target="_blank" rel="noreferrer">Leverages Career Vietnam Co., Ltd.</a></li>
-          <li class="l-footer__nav--item">Leverages Career Shanghai Co.,Ltd</li>
-          <li class="l-footer__nav--item"><a href="https://atlike.co.jp/" target="_blank" rel="noreferrer">ATLIKE株式会社</a></li>
+      <ul class="l-footer__nav">
+        <li class="l-footer__nav--item"><a href="https://leverages.jp/" target="_blank" rel="noreferrer">レバレジーズ株式会社</a></li>
+        <li class="l-footer__nav--item"><a href="" target="_blank" rel="noreferrer">レバレジーズオフィスサポート株式会社</a></li>
 
-        </ul>
-      </div>
+        <li class="l-footer__nav--item"><a href="https://levtech.jp/" target="_blank" rel="noreferrer">レバテック株式会社</a></li>
+        <li class="l-footer__nav--item"><a href="https://leverages-medicalcare.jp/" target="_blank" rel="noreferrer">レバレジーズメディカルケア株式会社</a></li>
+
+        <li class="l-footer__nav--item"><a href="https://leveragesma.jp/" target="_blank" rel="noreferrer">レバレジーズM&Aアドバイザリー株式会社</a></li>
+        <li class="l-footer__nav--item"><a href="https://lc-mexico.com/" target="_blank" rel="noreferrer">Leverages Career Mexico S.A. de C.V.</a></li>
+
+        <li class="l-footer__nav--item"><a href="https://vn.leveragescareer.com/?lang=ja" target="_blank" rel="noreferrer">Leverages Career Vietnam Co., Ltd.</a></li>
+        <li class="l-footer__nav--item">Leverages Career India Pvt. Ltd.</li>
+
+        <li class="l-footer__nav--item">Leverages Career Shanghai Co.,Ltd</li>
+        <li class="l-footer__nav--item">Leverages U.S. Inc.</li>
+
+        <li class="l-footer__nav--item"><a href="https://atlike.co.jp/" target="_blank" rel="noreferrer">ATLIKE株式会社</a></li>
+      </ul>
     </div>
     
     

@@ -7,7 +7,7 @@
   }
   &__inner{
     @include g.mq(pc) {
-      padding: 16.5px 16px 16.5px 24px;
+      padding: 15.5px 16px 15.5px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -26,17 +26,15 @@
     background-size: 100% auto;
     @include g.mq(pc){
       width: 95px;
-      height: 46px;
+      height: 47px;
     }
     @include g.mq(sp){
       width: 73px;
-      height: 35px;
+      height: 36px;
     }
-
     a{
       display: block;
     }
-
   }
   
   &__nav{
@@ -48,11 +46,6 @@
       flex-grow: 1;
       background-color: g.$bg;
       border-top: solid 1px g.$line;
-      // transition: all 0.5s ease-in-out;
-      // animation-duration: 0.5s;
-      // animation-name: fade-in;
-  
-
     }
   }
   &__nav--item--list{
@@ -130,7 +123,7 @@
     @include g.mq(pc) {
       display: flex;
     }
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 1024px) {
       padding: 32px 0;
       background-image: url('../img/bg_footer-recruit-sp.jpg');
       background-size: 100% auto;
@@ -148,7 +141,6 @@
       position: sticky;
       bottom: 0;
       width: 100%;
-      // transition: all 0.3s ease-in-out;
 
     }
   }
@@ -202,19 +194,18 @@
       width: 100vw;
       background: #FFF;
       z-index: 3;
-      visibility: hidden;
       position: fixed;
-      transition: all .2s ease-in-out;
-      top: 59px;
+      transition: all 500ms;
+      top: -101vh;
       right: 0;
-      bottom: 0;
-      left: 0;
+
       &.is-checked{
-        visibility: visible;
-        
+        right: 0;
+        top: 59px;
       }
     }
   }
+
   &__modal--inner{
     @include g.mq(pc){
       display: flex;
@@ -227,29 +218,6 @@
   }
 }
 
-
-
-// body {
-//   animation: bugfix infinite 1s;
-//   -webkit-animation: bugfix infinite 1s;
-// }
-
-// @keyframes bugfix {
-//   from {
-//     padding: 0;
-//   }
-//   to {
-//     padding: 0;
-//   }
-// }
-// @-webkit-keyframes bugfix {
-//   from {
-//     padding: 0;
-//   }
-//   to {
-//     padding: 0;
-//   }
-// }
 
 
 #header__modal-input {
@@ -276,25 +244,78 @@
   }
 }
 
-body {
+// body {
+//   animation: bugfix infinite 1s;
+//   -webkit-animation: bugfix infinite 1s;
+// }
 
-  animation: bugfix infinite 1s;
-  -webkit-animation: bugfix infinite 1s;
+// @keyframes bugfix {
+//   from {
+//     padding: 0;
+//   }
+//   to {
+//     padding: 0;
+//   }
+// }
+// @-webkit-keyframes bugfix {
+//   from {
+//     padding: 0;
+//   }
+//   to {
+//     padding: 0;
+//   }
+// }
+
+body#home{
+  .l-header__nav--item--home{
+    a{
+      pointer-events: none;
+      @include g.mq(pc) {
+        &::after{
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+}
+body#company{
+  .l-header__nav--item--company{
+    a{
+      pointer-events: none;
+      @include g.mq(pc) {
+        &::after{
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
 }
 
-@keyframes bugfix {
-  from {
-    padding: 0;
-  }
-  to {
-    padding: 0;
-  }
-}
-@-webkit-keyframes bugfix {
-  from {
-    padding: 0;
-  }
-  to {
-    padding: 0;
+body#environment{
+  .l-header__nav--item--environment{
+    a{
+      pointer-events: none;
+      @include g.mq(pc) {
+        &::after{
+          transform: scale(1, 1);
+        }
+      }
+    }
   }
 }
+
+body#contact, 
+body#contact_confirm,
+body#contact_thanks{
+  .l-header__nav--item--contact{
+    a{
+      pointer-events: none;
+      @include g.mq(pc) {
+        &::after{
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+}
+

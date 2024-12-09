@@ -6,6 +6,81 @@
   position: relative;
   display: block;
   width: 100%;
+
+  &__wrapper{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    @include g.mq(pc){
+      width: 500px;
+      height: 200px;
+      &::before,
+      &::after{
+        background-color: g.$red;
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        transition: all .4s ease;
+      }
+      &::after{
+        width: 0px;
+        height: 2px;
+        top: -1px;
+        left: -1px;
+      }
+      &::before{
+        width: 0px;
+        height: 2px;
+        right: -1px;
+        bottom: -1px;
+      }
+      &:hover{
+        &::before{
+          width: 100%;
+          width: calc(100% + 1px);
+        }
+        &::after{
+          width: 100%;
+          width: calc(100% + 1px);
+        }
+        span{
+          &::before{
+            width: 2px;
+            height: 201px;
+          }
+          &::after{
+            width: 2px;
+            height: 201px;
+          }
+        }
+      }
+      .c-bnrlink__line{
+        &::before,
+        &::after{
+          background-color: g.$red;
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: 1;
+          transition: all .4s ease;
+        }
+        &::before{
+          width: 2px;
+          height: 0px;
+          top: -1px;
+          right: -1px;
+        }
+        &::after{
+          width: 2px;
+          height: 0px;
+          left: -1px;
+          bottom: -1px;
+        }
+
+      }
+    }
+  }
   &.c-multi{
     @include g.mq(pc){
       border-left: 1px solid g.$white;
@@ -33,7 +108,6 @@
       &::before{
         background: g.$bnrhover;
         opacity: 1;
-        border: solid 1px g.$red;
       }
     }
 
@@ -86,7 +160,8 @@
       margin-bottom: 10px;
     }
     @include g.mq(sp){
-      @include g.font-rem(24);
+      // @include g.font-rem(24);
+      font-size: 6.85vw;
       margin-bottom: 7px;
     }
   }
@@ -102,7 +177,8 @@
       @include g.font-rem(16);
     }
     @include g.mq(sp){
-      @include g.font-rem(24);
+      // @include g.font-rem(12);
+      font-size: 3.23vw;
     }
   }
   &__txt{

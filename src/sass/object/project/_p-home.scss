@@ -15,10 +15,11 @@
 
 
   &__kv--wrapper {
+
     @include g.mq(pc) {
       width: 100%;
       padding-left: 25vw;
-      height: calc(100vh - 85px);
+      height: calc(100vh - g.$pcHeader);
 
       img {
         width: auto;
@@ -29,6 +30,10 @@
 
       }
     }
+    @media screen and (min-width: 1280px) {
+      padding-left: 50%;
+      padding-left: calc(50vw - 250px);
+    }
     @include g.mq(sp) {
     }
   }
@@ -37,8 +42,8 @@
     @include g.mq(pc) {
       position: relative;
       overflow: hidden;
-      height: calc(100vh - 85px);
-      max-height: calc(100vh - 85px);
+      height: calc(100vh - g.$pcHeader);
+      max-height: calc(100vh - g.$pcHeader);
       &::before {
         animation: img-wrap 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         background: g.$bg;
@@ -65,11 +70,46 @@
       bottom: 0px;
       left: 7.8vw;
       display: block;
+      animation-duration: 0.6s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    @media screen and (min-width: 1280px) {
+      left: calc(50vw - 550px);
     }
 
     @include g.mq(sp) {
       display: none;
     }
+    &.fadeOut {
+      animation-name: fade-out;
+      animation-duration: 0.6s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    &.fadeIn {
+      animation-name: fade-in;
+      animation-duration: 0.6s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fade-out {
+      0% {
+         opacity:  1;
+      }
+      100% {
+         opacity: 0;
+      }
+    }
+    @keyframes fade-in {
+      0% {
+         opacity:  0;
+      }
+      100% {
+         opacity: 1;
+      }
+    }
+
   }
 
   &__scroll--wrapper {
@@ -112,32 +152,49 @@
 
 
 
-
   &__feature {
-
     @include g.mq(pc){
+      top: calc(35vh + g.$pcHeader);
       position: fixed;
       left: calc(50%);
       transform: translate(-50%, 0);
-      top: calc(35vh + g.$pcHeader);
       width: 1000px;
-      padding-top: 5px;
+      margin: 0 auto;
+      display: block;
       &.sticky{
         position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translate(0,  -50%);
-        width: 1000px;
-        padding-top: 5px;
       }
+
     }
     @include g.mq(sp){
       position: absolute;
-      top: 96vw;
-      left:16px;
+      top: 94vw;
+      left: 4.6vw;
+      z-index: 2;
     }
   }
-
+  &__feature--wrapper{
+    @include g.mq(pc){
+      // top: g.$pcHeader;
+      // position: fixed;
+      // left: calc(50%);
+      // transform: translate(-50%, 0);
+      // width: 1000px;
+      // margin: 0 auto;
+      // display: block;
+      // &.sticky{
+      //   position: absolute;
+      // }
+    }
+  }
+  &__feature--wrapper-flx{
+    @include g.mq(pc){
+    // padding-top: 5.8vh;
+    // display: flex;
+    // align-items: center;
+    // width: 1000px;
+    }
+  }
   &__feature--pfirst {
     display: flex;
     overflow: hidden;
@@ -157,23 +214,25 @@
   }
 
   &__feature--text {
-    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "M PLUS 1", sans-serif;
-    font-family: "yu-gothic-pr6n", sans-serif;
-    font-weight: 500;
-    background-color: #FFF;
-    border-bottom: solid 3px g.$red;
-    line-height: 92%;
-    padding-bottom: 10px;
-    margin: 0;
+
+    margin: 0 -1px;
     opacity: 0;
     /* 文字を透明化 */
     animation: textanimation 0.7s forwards;
+  
     @include g.mq(pc){
-      @include g.font-rem(64);
-
+      img{
+        height: 5vw;
+        max-height: 90px;
+        width: auto;
+      }
     }
     @include g.mq(sp){
-      @include g.font-rem(42);
+      // @include g.font-rem(42);
+      img{
+        height: 14.2vw;
+        width: auto;
+      }
 
     }
     /* 1文字目 */
@@ -229,24 +288,25 @@
   }
 
   &__feature--text-later {
-    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "M PLUS 1", sans-serif;
-    font-family: "yu-gothic-pr6n", sans-serif;
-    font-weight: 500;
-    background-color: #FFF;
-    border-bottom: solid 3px g.$red;
-    line-height: 92%;
-    padding-bottom: 10px;
-    margin: 0;
     opacity: 0;
     /* 文字を透明化 */
     animation: textanimation 1s forwards;
-    @include g.mq(pc){
-      @include g.font-rem(64);
+    margin: 0 -1px;
 
+    @include g.mq(pc){
+      // @include g.font-rem(64);
+      img{
+        height: 5vw;
+        max-height: 90px;
+        width: auto;
+      }
     }
     @include g.mq(sp){
-      @include g.font-rem(42);
-
+      // @include g.font-rem(42);
+      img{
+        height: 14.2vw;
+        width: auto;
+      }
     }
     /* 1文字目 */
     &:nth-child(1) {
@@ -304,12 +364,17 @@
   &__aboutus {
     position: relative;
     @include g.mq(pc) {
-      padding-top: 180px;
-      padding-bottom: 180px;
+      max-width: g.$pcInner;
+      width: 100%;
+      margin: 0 auto;
+      padding: 180px g.$pcPadding;
+  
     }
 
     @include g.mq(sp) {
-      padding-bottom: 60px;
+      padding: 0 g.$spPadding 60px;
+      width: 100%;
+      margin: 0 auto;
     }
   }
   &__aboutus--kv{
@@ -317,20 +382,31 @@
       display: none;
     }
     @include g.mq(sp) {
-      padding-bottom: 100px;
-      margin-right: -16px;
-      margin-left: -16px;
+      // padding-bottom: 28.5vw;
+      margin-right: -4.6vw;
+      margin-left: -4.6vw;
+      height: 100vw;
+      position: relative;
+      img{
+        height: 100vw;
+        width: auto;
+        object-fit: cover;
+      }
     }
 
   }
 
   &__aboutus--inner {
+
     @include g.mq(pc) {
       padding-left: 466px
     }
+    @media screen and (min-width: 1280px) {
+      padding-left: 50%;
+    }
 
     @include g.mq(sp) {
-      padding: 60px 0 0;
+      padding: 45vw 0 0;
     }
   }
 

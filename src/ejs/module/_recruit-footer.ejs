@@ -1,21 +1,36 @@
 <section class="l-recruit-footer" id="recruit-footer">
-  
-  <div class="l-recruit-footer__inner inner">
-    <div class="l-recruit-footer__wrapper-ttl">
-      <h2 class="l-recruit-footer__ttl">JOIN US!</h2>
-      <p class="l-recruit-footer__subttl">新卒採用 スタート</p>
-    </div>
-    <div class="l-recruit-footer__wrapper-button">
-      <div class="l-recruit-footer__button">
-        <a href="<%= pageinit.path %>recruit/graduates/" target="_blank" rel="noreferrer" class="c-button__recruit">
-          <span class="c-button__recruit--txt">新卒採用</span>
-          <span class="c-button__recruit--arrow"></span>
-        </a>
-      </div>
-      <div class="l-recruit-footer__button">
-        <span class="c-button__midcarrer">中途採用</span>
-      </div>
-
+  <div class="l-recruit-footer__imgblc">
+    <div class="l-recruit-footer__imgblc--relative">
+      <picture>
+        <source srcset="<%= pageinit.path %>img/bg_footer-recruit-pc.webp" type="image/webp" />
+        <img src="<%= pageinit.path %>img/bg_footer-recruit-pc.jpg" alt="JOIN US" width="1302" height="845">
+      </picture>
     </div>
   </div>
+
+
+  <div class="l-recruit-footer__contents">
+    <div class="l-recruit-footer__inner inner">
+      <div class="l-recruit-footer__wrapper-ttl">
+        <h2 class="l-recruit-footer__ttl">JOIN US!</h2>
+        <p class="l-recruit-footer__subttl">新卒採用 スタート</p>
+      </div>
+      <div class="l-recruit-footer__wrapper-button">
+        <div class="l-recruit-footer__button">
+          <a href="<%= pageinit.path %>recruit/graduates/" target="_blank" rel="noreferrer" class="c-button__recruit">
+            <span class="c-button__recruit--txt">新卒採用</span>
+            <span class="c-button__recruit--arrow"></span>
+          </a>
+        </div>
+        <div class="l-recruit-footer__button">
+          <span class="c-button__recruit disabled">
+            <span class="c-button__recruit--txt">中途採用</span>
+            <span class="c-button__recruit--arrow"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </section>

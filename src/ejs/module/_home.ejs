@@ -4,11 +4,11 @@
         <div class="p-home__kv" id="home__kv">
           <div class="p-home__kv--wrapper">
             <picture class="p-home__kv--img">
-              <source srcset="<%= pageinit.path %>img/kv_home-pc.webp" type="image/webp" />
-              <img src="<%= pageinit.path %>img/kv_home-pc.jpg" alt="つながりは誰かを支える" width="2252" height="1506" />
+              <source srcset="<%= pageinit.path %>img/fv_home-pc.webp" type="image/webp" />
+              <img src="<%= pageinit.path %>img/fv_home-pc.jpg" alt="つながりは誰かを支える" width="2800" height="2259" />
             </picture>
           </div>
-          <div class="p-home__scroll">
+          <div class="p-home__scroll" id="js-homeScroll">
             <div class="p-home__scroll--wrapper">
               <p class="p-home__scroll--text u-text__opensans">SCROLL</p>
               <div class="p-home__scroll--line"></div>
@@ -17,40 +17,97 @@
         </div>
         <!-- PC限定 -->
 
-
-        <div class="p-home__aboutus inner">
-          <!-- SP限定 -->
-           <div class="p-home__aboutus--kv">
-            <picture class="p-home__kv--img">
-              <source srcset="<%= pageinit.path %>img/kv_home-sp.webp" type="image/webp" />
-              <img src="<%= pageinit.path %>img/kv_home-sp.jpg" alt="つながりは誰かを支える" width="1125" height="1125" />
-            </picture>
-           </div>
-
-          <!-- SP限定 -->
-
-          <div class="p-home__feature" id="js-homefeature">
-            <div class="p-home__feature--pfirst">
-              <p class="p-home__feature--text">つ</p>
-              <p class="p-home__feature--text">な</p>
-              <p class="p-home__feature--text">が</p>
-              <p class="p-home__feature--text">り</p>
-              <p class="p-home__feature--text">は</p>
-            </div>
-            <div class="p-home__feature--psecond">
-              <p class="p-home__feature--text-later">誰</p>
-              <p class="p-home__feature--text-later">か</p>
-              <p class="p-home__feature--text-later">を</p>
-              <p class="p-home__feature--text-later">支</p>
-              <p class="p-home__feature--text-later">え</p>
-              <p class="p-home__feature--text-later">る</p>
-            </div>
+        <!-- 文字部分 -->
+        <div class="p-home__feature" id="fixLetters">
+          <div class="p-home__feature--pfirst">
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter01.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter01.jpg" alt="つ" width="216" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter02.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter02.jpg" alt="な" width="204" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter03.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter03.jpg" alt="が" width="225" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter04.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter04.jpg" alt="り" width="184" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter05.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter05.jpg" alt="は" width="228" height="288">
+              </picture>
+            </p>
           </div>
+          <div class="p-home__feature--psecond">
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter06.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter06.jpg" alt="誰" width="222" height="288">
+              </picture>
+            </p>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter07.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter07.jpg" alt="か" width="207" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter08.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter08.jpg" alt="を" width="191" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter09.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter09.jpg" alt="支" width="218" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter10.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter10.jpg" alt="え" width="203" height="288">
+              </picture>
+            </p>
+            <p class="p-home__feature--text-later">
+              <picture>
+                <source srcset="<%= pageinit.path %>img/fv_letter11.webp" type="image/webp" />
+                <img src="<%= pageinit.path %>img/fv_letter11.jpg" alt="る" width="221" height="288">
+              </picture>
+            </p>
+          </div>
+        </div>
+        <!-- 文字部分 -->
 
-          <div class="p-home__aboutus--inner inner">
+
+        <div class="p-home__aboutus" id="home__aboutus">
+          <!-- SP限定 -->
+          <div class="p-home__aboutus--kv">
+            <picture class="p-home__kv--img">
+              <source srcset="<%= pageinit.path %>img/fv_home-sp.webp" type="image/webp" />
+              <img src="<%= pageinit.path %>img/fv_home-sp.jpg" alt="つながりは誰かを支える" width="1500" height="1500" />
+            </picture>
+          </div>
+          <!-- SP限定 -->
+
+          <div class="p-home__aboutus--inner">
             <h2 class="u-text__h2 u-margin__ttl-en">About Us</h2>
-            <p class="u-text__subttl-jp u-margin__subttl-jp" id="home__aboutus">レバレジーズスタッフィングとは</p>
-            <p class="u-text__text u-margin__text">レバレジーズスタッフィングはレバレジーズのグループ会社です。<br>
+            <p class="u-text__subttl-jp u-margin__subttl-jp">レバレジーズスタッフィングとは</p>
+            <p class="u-text__text u-margin__text" id="js-aboutHight">レバレジーズスタッフィングはレバレジーズのグループ会社です。<br>
               人材派遣サービス企業で、現在は看護師人材派遣サービス「レバウェル看護」、介護士人材派遣サービス「レバウェル介護」等を提供しています。</p>
             <p class="u-text__text">
               「自分たちの仕事によって、困っている誰かがプラスの感情になる」そんな事業づくりをしてます。<br>今後も人材不足や社会課題となって困っている業界があれば、社会の課題解決をしていきます。</p>
@@ -60,20 +117,36 @@
       </section>
 
       <section class="p-home__bnrlink inner" id="home__bnrlink">
-        <a class="c-bnrlink" href="<%= pageinit.path %>/company/" target="_blank">
-          <div class="c-bnrlink__block">
-            <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
-            <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
-            <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
-          </div>
-          <div class="c-bnrlink__bg company"></div>
-        </a>
-        <a class="c-bnrlink c-multi" href="<%= pageinit.path %>/environment/" target="_blank">
-          <div class="c-bnrlink__block">
-            <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
-            <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
-            <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
-          </div>
-          <div class="c-bnrlink__bg environment"></div>
-        </a>
+
+        <div class="c-bnrlink__wrapper">
+          <span class="c-bnrlink__line">
+            <a class="c-bnrlink" href="<%= pageinit.path %>company/">
+              <div class="c-bnrlink__block">
+                <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
+                <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
+                <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+              </div>
+              <div class="c-bnrlink__bg company"></div>
+            </a>
+          </span>
+        </div>
+
+
+        <div class="c-bnrlink__wrapper">
+          <span class="c-bnrlink__line">
+            <div class="c-bnrlink__contents--wrapper">
+              <a class="c-bnrlink c-multi" href="<%= pageinit.path %>environment/">
+                <div class="c-bnrlink__block">
+                  <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
+                  <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
+                  <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+                </div>
+                <div class="c-bnrlink__bg environment"></div>
+              </a>
+
+            </div>
+
+          </span>
+        </div>
+
       </section>

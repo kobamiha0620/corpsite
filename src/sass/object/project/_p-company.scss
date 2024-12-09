@@ -115,8 +115,69 @@
   &__profile--note{
     margin-top: 1em;
   }
-  @include g.mq(pc){
+  &__message{
   }
-  @include g.mq(sp){
+  &__message--inner{
+    @include g.mq(pc){
+    }
+    @include g.mq(sp){
+
+    }
   }
+  &__message--word{
+    background-color: g.$white;
+    width: 100%;
+    padding: 32px;
+    @include g.mq(pc){
+    }
+  }
+  &__message--inner{
+    
+    @include g.mq(pc){
+      padding: 98px 0 24px 341px;
+      height: 100%;
+      position: relative;
+      background-image:url('../img/bg_message.jpg');
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: auto 100%;
+    }
+    @include g.mq(sp){
+      padding: 61.14vw 0 0 9.15vw;
+      height: 100%;
+      position: relative;
+      background-image:url('../img/bg_message-sp.png');
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 62.5vw 96.47vw;
+    }
+  
+  }
+  &__message--enname{
+    @include g.mq(pc){
+      margin: 6px 0 0 24px;
+    }
+    @include g.mq(sp){
+      margin: 6px 0 0 24px;
+    }
+  }
+  &__message--ttlblc{
+    display: flex;
+    align-items: center;
+    @include g.mq(pc){
+      margin: 28px 0;
+    }
+    @include g.mq(sp){
+      margin: 32px 0;
+    }
+  }
+  &__message--feature{
+    @include g.mq(pc){
+      margin: 0 0 16px;
+    }
+    @include g.mq(sp){
+      margin: 0 0 16px;
+    }
+  }
+
 }

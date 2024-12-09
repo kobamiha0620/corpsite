@@ -1,0 +1,357 @@
+@use "../../global/"as g;
+
+.p-environment {
+  &__introduce {
+
+  }
+
+  &__introduce--inner {
+    @include g.mq(pc) {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    @include g.mq(sp) {
+      display: block;
+    }
+  }
+
+  &__introduce--image {
+    @include g.mq(pc) {
+      display: block;
+      width: 333px;
+      max-width: 333px;
+      min-width: 333px;
+      background-image: url('../img/img_kv-environment-pc.jpg');
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: cover;
+      margin-right: 32px;
+    }
+
+    @include g.mq(sp) {
+      background-image: url('../img/img_kv-environment-sp.jpg');
+      width: 100vw;
+      margin: 0 -4.6vw 9.1vw;
+      padding-top: 61vw;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__introduce--ttl {
+    @include g.mq(pc) {
+      margin-bottom: 16px;
+    }
+
+    @include g.mq(sp) {
+      margin-bottom: g.$spPadding;
+    }
+  }
+
+  &__introduce--blc {
+    @include g.mq(pc) {
+      margin-bottom: 40px;
+    }
+
+    @include g.mq(sp) {
+      margin-bottom: 2.85vw;
+    }
+  }
+
+  &__introduce--list {
+    @include g.mq(pc) {}
+
+    @include g.mq(sp) {}
+  }
+
+  &__introduce--list-item {
+    @include g.mq(pc) {
+      margin-bottom: 16px;
+    }
+
+    @include g.mq(sp) {
+      margin-bottom: g.$spPadding;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__introduce--list-ttl {
+    font-weight: bold;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+
+    &::before {
+      content: "・";
+      color: g.$red;
+    }
+
+    @include g.mq(pc) {
+      @include g.font-rem(20);
+      margin-bottom: 8px;
+    }
+
+    @include g.mq(sp) {
+      @include g.font-rem(16);
+    }
+  }
+
+  &__introduce--list-num {
+    display: inline-block;
+
+    @include g.mq(pc) {
+      margin-right: 8px;
+    }
+
+    @include g.mq(sp) {
+      margin-right: 4px;
+    }
+  }
+
+  &__introduce--maintext {}
+  &__info{
+
+  }
+  &__info--blc {
+    @include g.mq(pc) {
+      display: flex;
+      justify-content: space-between;
+      margin: 80px 0 0;
+    }
+
+    @include g.mq(sp) {
+      display: block;
+      margin: 32px 0 0;
+    }
+  }
+
+  &__info--list {
+    @include g.mq(pc) {
+      max-width: 480px;
+      width: 100%;
+    }
+
+    &.spmargin{
+      @include g.mq(sp) {
+        margin-top: 9vw;
+      }
+    }
+  }
+
+  &__info--img {
+    img{
+      width: 100%;
+    }
+    @include g.mq(pc) {
+      margin: 0 auto 40px;
+    }
+    @include g.mq(sp) {
+
+      margin: 0 auto 24px;
+    }
+
+  }
+  &__info--ttl{
+    @include g.mq(pc) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    @include g.mq(sp) {
+      text-align-last: left;
+      margin-bottom: 8px;
+    }
+  }
+
+
+  &__numbers{
+    background-color: g.$bg-d;
+  }
+  &__numbers--lists{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+  &__numbers--item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: g.$white;
+    border: solid 1px g.$bg-d;
+    width: 100%;
+    @include g.mq(pc) {
+      padding: 34px 24px 28px;
+      width: 25%;
+      min-width: 25%;
+    }
+    @include g.mq(sp) {
+      width: 50%;
+      min-width: 50%;
+      padding: 24px 0;
+    }
+  }
+  &__numbers--txtblc{
+    display: flex;
+    align-items: center;
+    @include g.mq(pc) {
+      height: 48px;
+      margin-top: 9px;
+      margin-bottom: 8px;
+    }
+    @include g.mq(sp) {
+      height: 40px;
+      margin: 8px 0;
+    }
+  }
+  &__numbers--subttl{
+    text-align: center;
+    font-family: "Noto Sans JP", serif;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    @include g.mq(pc) {
+      @include g.font-rem(18);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(14);
+    }
+  }
+  &__numbers--itemimg{
+    @include g.mq(pc) {
+      height: 38px;
+      margin: 0 auto;
+    }
+    @include g.mq(sp) {
+      height: 10vw;
+      margin: 0 auto;
+    }
+    img{
+      width: auto;
+      height: 100%;
+    }
+  }
+  &__numbers--numblc{
+    display: flex;
+    justify-content: center;
+
+    @include g.mq(pc) {
+      align-items: flex-end;
+    }
+    @include g.mq(sp){
+      align-items: center;
+    }
+  }
+  &__numbers--num{
+    color: g.$red;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    @include g.mq(pc) {
+      @include g.font-rem(56);
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(40);
+    }
+  }
+  &__numbers--unit{
+    font-family: "Noto Sans JP", serif;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    color: g.$red;
+    display: inline-block;
+    @include g.mq(pc) {
+      @include g.font-rem(20);
+      margin-bottom: 7px;
+      margin-left: 3px;
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(18);
+      margin-left: 3px;
+      margin-top: 6px;
+    }
+  }
+  &__numbers--note{
+    font-family: "Noto Sans JP", serif;
+    line-height: 100%;
+    font-weight: 400;
+    color: #878787;
+    @include g.mq(pc) {
+      @include g.font-rem(12);
+      margin-top: g.$pcPadding;
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(10);
+      margin-top: 8px;
+    }
+  }
+
+  &__benefit{
+    @include g.mq(pc) {
+    padding-top: 80px;
+    }
+    @include g.mq(sp) {
+      padding: 60px 4.6vw 0;
+    }
+
+  }
+
+  &__benefit--lists{
+    @include g.mq(pc) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+    }
+    @include g.mq(sp) {
+      display: block;
+    }
+  }
+  &__benefit--item{
+    border-bottom: 1px solid g.$line;
+    @include g.mq(pc) {
+      width: 48.4%;
+      max-width: 484px;
+      min-width: 484px;
+      margin-bottom: 32px;
+      padding-bottom: 40px;
+      &.bnone{
+        border-bottom: none;
+
+      }
+    }
+    @include g.mq(sp) {
+      width: 100%;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+
+  }
+  &__benefit--item-ttl{
+    font-family: "Noto Sans JP", serif;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+
+    @include g.mq(pc) {
+      @include g.font-rem(20);
+      margin-bottom: g.$pcPadding;
+    }
+    @include g.mq(sp) {
+      @include g.font-rem(16);
+      margin-bottom: 8px;      
+    }
+  }
+  @include g.mq(pc) {}
+  @include g.mq(sp) {}
+}

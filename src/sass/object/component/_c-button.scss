@@ -51,7 +51,18 @@
     @include g.mq(sp) {
       @include g.font-rem(18);
     }
-
+    &.disabled{
+      background-color: g.$bg-d2;
+      color: g.$white;
+      text-align: center;
+      text-decoration: none;
+      .c-button__recruit--arrow{
+        display: none;
+      }
+      &::before {
+        background-color: g.$bg-d2;
+      }
+    }
   }
 
   &__recruit--txt {
@@ -85,31 +96,6 @@
     display: block;
   }
 
-  &__midcarrer {
-    background-color: g.$bg-d2;
-    color: g.$white;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Noto Sans JP", serif;
-    font-weight: 600; //Regular
-    line-height: 100%;
-    letter-spacing: 0.06em;
-    transition: all 0.3s ease-in-out;
-    padding: 16px 0;
-    display: block;
-    max-width: 292px;
-    width: 100%;
-
-    @include g.mq(pc) {
-      @include g.font-rem(16);
-    }
-
-    @include g.mq(sp) {
-      @include g.font-rem(18);
-      background-position: right 14px center;
-    }
-  }
-
   &__recruit--header {
     background-color: g.$red;
     color: g.$white;
@@ -123,7 +109,7 @@
     white-space: nowrap;
 
     @include g.mq(pc) {
-      padding: 18px 26px;
+      padding: 16px 26px;
       transition: all 0.3s ease-in-out;
 
       &::before {
@@ -143,7 +129,6 @@
 
       &:hover {
         background: g.$red-d;
-
         .c-button__recruit--header-txt {
           color: rgba($color: white, $alpha: 0.7);
         }
@@ -165,6 +150,27 @@
       padding: 16px 0;
       @include g.font-rem(18);
       background-position: right 14px center;
+    }
+    &.disabled{
+      background-color: g.$line;
+      color: g.$txt-d;
+      max-width: 133px;
+      width: 100%;
+      border: 1px solid g.$line;
+      .c-button__recruit--header-arrow{
+        display: none;
+      }
+      &::before{
+        background-color: g.$line;
+      }
+      &:hover {
+        background-color: g.$line;
+      }
+      @include g.mq(sp) {
+        max-width: 292px;
+        width: 100%;
+      }
+
     }
   }
 
@@ -230,7 +236,7 @@
 
     @include g.mq(pc) {
       @include g.font-rem(14);
-      padding: 19px 37px;
+      padding: 17px 37px;
       transition: all 0.3s ease-in-out;
 
     }
@@ -263,39 +269,99 @@
       }
   }
   &__common{
-    text-decoration: none;
-    color: g.$red;
+    background-color: g.$white;
+    border: solid 1px g.$red;
     text-align: center;
-    border: solid g.$red 1px;
-    font-family: "Noto Sans JP", serif;
-    line-height: 100%;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    background-image: url('../img/arrow_btn-common.png');
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    transition: all 0.2s ease-in-out;
-    &:disabled{
-      border: solid 1px g.$txt;
-      color: g.$txt;
-      background-image: url('../img/arrow_btn-common-disable.png');
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    max-width: 292px;
+    width: 100%;
+    position: relative;
+    @include g.mq(pc) {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        padding: 14px 0 ;
+        width: 100%;
+        height: 100%;
+        background-color: g.$red;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: all 0.3s ease;
+        transition-property: transform;
+      }
+
+      &:hover {
+        background: g.$red;
+
+        .c-button__common--txt {
+          color: g.$white;
+        }
+
+        .c-button__common--arrow {
+          background-image: url('../img/arrow_btn-recruit.png');
+        }
+        &::before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
-    @include g.mq(pc){
-      @include g.font-rem(16);
-      display: inline-block;
-      padding: 14px 0 ;
-      max-width: 292px;
-      width: 292px;
-      min-width: 292px;
-      
-    }
+
     @include g.mq(sp){
-      @include g.font-rem(16);
       display: block;
       width: 100%;
       padding: 14px 0;
     }
+    &:disabled{
+      border: solid 1px g.$txt;
+      color: g.$txt;
+      &::before{
+        background-color: g.$white;
+      }
+      .c-button__common--txt {
+        color: g.$txt;
+      }
+      .c-button__common--arrow {
+        background-image: url('../img/arrow_btn-common-disable.png');
+      }
+      &:hover {
+        background: g.$white;
+      }
+    }
+  }
+  &__common--txt{
+    font-family: "Noto Sans JP", serif;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+    color: g.$red;
+    @include g.mq(pc){
+      @include g.font-rem(16);
+    }
+    @include g.mq(sp){
+      @include g.font-rem(16);
+    }
+  }
+  &__common--arrow{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../img/arrow_btn-recruit.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 20px;
+    height: 20px;
+    display: block;
   }
 
   &__return{
@@ -315,10 +381,6 @@
       background-position: left center;
     }
   }
-
-
-
-
 
   //ヘッダー--
   &__modal {
@@ -454,38 +516,38 @@
       position: absolute;
       right: 3px;
       top: 3px;
-      padding: 26px 11px;
+      padding: 26px 14px;
       z-index: 5;
       cursor: pointer;
       user-select: none;
 
       span {
         height: 1px;
-        width: 35px;
+        width: 24px;
         border-radius: 2px;
         background-color: #000;
         position: relative;
         display: block;
-        transition: all .2s ease-in-out;
+        transition: all .5s ease-in-out;
 
         &:before {
-          top: -10px;
+          top: -8px;
           visibility: visible;
         }
 
         &:after {
-          top: 10px;
+          top: 8px;
         }
 
         &:before,
         &:after {
           height: 1px;
-          width: 35px;
+          width: 24px;
           border-radius: 2px;
           background-color: #000;
           position: absolute;
           content: "";
-          transition: all .2s ease-in-out;
+          transition: all .3s ease-in-out;
         }
       }
 
@@ -518,11 +580,11 @@
           background: transparent;
 
           &:before {
-            transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(6px, 6px);
           }
 
           &:after {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(6px, -6px);
           }
         }
       }
@@ -547,11 +609,11 @@
           background: transparent;
 
           &:before {
-            transform: rotate(45deg) translate(7px, 7px)!important;
+            transform: rotate(45deg) translate(5.5px, 5.5px)!important;
           }
 
           &:after {
-            transform: rotate(-45deg) translate(7px, -7px)!important;
+            transform: rotate(-45deg) translate(5.5px, -5.5px)!important;
           }
         }
       }

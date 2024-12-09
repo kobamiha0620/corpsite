@@ -100,15 +100,17 @@
       <div class="p-contact__agree">
         <label>
           <input class="p-contact__agree--hidden" type="checkbox" name="policy" value="プライバシーポリシーに同意する"
-            id="contact__agree" checked>
+            id="contact__agree" disabled checked>
           <span class="p-contact__agree--link"><a href="https://leverages.jp/privacypolicy" target="_blank"
-              rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span><span
-              class="pc">に同意する</span></span>
+              rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span>に同意する</span>
         </label>
       </div>
 
       <div class="c-button__common--wrapper">
-        <button type="submit" name="submit" value="送信" class="c-button__common" id="button__submit">送信する</button>
+        <button type="submit" name="submit" value="送信する" class="c-button__common" id="button__submit">
+          <span class="c-button__common--txt">送信する</span>
+          <span class="c-button__common--arrow"></span>
+        </button>
       </div>
 
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/contact/thanks/';}"></iframe>
