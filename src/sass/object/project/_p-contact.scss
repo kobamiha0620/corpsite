@@ -99,6 +99,53 @@
       margin-bottom: 16px;
     }
   }
+  &__td--content{
+    display: block;
+    width: 100%;
+    @include g.mq(pc){
+      input[type="tel"],
+      input[type="email"],
+      textarea{
+        max-width: 100%;
+      }
+    }
+    @include g.mq(sp){
+      max-width: 100%;
+
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      textarea{
+        max-width: 100%;
+      }
+    }
+
+    &.errorwrapper{
+      .p-contact__td--input, .p-contact__td--textarea{
+        border-color: g.$red;
+        background-color: #F9EBF6;
+      }
+    }
+  }
+  &__td--noflex{
+    @include g.mq(pc){
+      input[type="tel"],
+      input[type="email"],
+      textarea{
+        max-width: 100%;
+      }
+    }
+    @include g.mq(sp){
+      max-width: 100%;
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      textarea{
+        max-width: 100%;
+      }
+    }
+  }
+
   &__td--label{
     white-space: nowrap;
     margin-right: 1em;
@@ -116,9 +163,7 @@
       height: 172px;
     }
   }
-  &__td--noflex{
-    width: 100%;
-  }
+
   &__note{
     font-weight: 400;
     line-height: 100%;
@@ -219,10 +264,32 @@
     height: 10px;
   }
   &__returnbtn{
+    @include g.mq(pc){
+      position: absolute;
+      left: -80px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
     @include g.mq(sp){
       margin-top: 24px;
       padding: 0 6.5vw;
     }
 
   }
+}
+
+.error{
+  color: g.$red;
+  margin-top: 5px;
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  line-height: 100%;
+
+  @include g.mq(pc) {
+    @include g.font-rem(14);
+  }
+  @include g.mq(sp) {
+    @include g.font-rem(12);
+  }
+
 }

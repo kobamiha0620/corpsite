@@ -9,16 +9,31 @@
     background-size: cover;
     background-repeat: no-repeat;
     &.company{
-      background-image: url('../img/bg_ttl-company.jpg');
+      @include g.mq(pc){
+        background-image: url('../img/company-header.jpg');
+        background-position: center center;
+      }
+      @include g.mq(sp){
+        background-image: url('../img/company-heade_sp.jpg');
+      }
+
     }
     &.environment{
-      background-image: url('../img/bg_ttl-environment.jpg');
+      @include g.mq(pc){
+        background-image: url('../img/environment-header.jpg');
+        background-position: center center;
+
+      }
+      @include g.mq(sp){
+        background-image: url('../img/environment-header_sp.jpg');
+      }
     }
     @include g.mq(pc){
       padding: 72px 0;
     }
     @include g.mq(sp){
       padding: 16vw 0;
+      background-size: cover;
     }
   }
   // &__intro--textblc{

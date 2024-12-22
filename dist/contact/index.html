@@ -8,14 +8,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>レバレジーズスタッフィング株式会社 | お問い合わせ | レバレジーズスタッフィング株式会社</title>
+  <title>お問い合わせ | レバレジーズスタッフィング株式会社</title>
 
   <link rel="canonical" href="https://leverages.jp/" />
   <link rel="icon" href="../img/favicon.ico">
   <!-- iOS Safari and Chrome -->
   <link rel="apple-touch-icon" sizes="192x192" href="../img/touch-icon.png">
 
-  <meta property="og:title" content="お問い合わせ | レバレジーズスタッフィング株式会社" />
+  <meta property="og:title" content="レバレジーズスタッフィング株式会社" />
   <meta property="og:description" content="レバレジーズスタッフィング株式会社へのお問い合わせです。" />
   <meta property="og:url" content="https://leverages-staffing.jp/contact/"/>
   <meta property="og:image" content="https://leverages-staffing.jp/img/ogp.jpg"/>
@@ -39,7 +39,7 @@
 
 
 
-<body id="contact">
+<body id="contact" ontouchstart="">
   <!-- 全ページ共通 -->
   <div class="wrapper">
     <header class="l-header" id="header">
@@ -97,112 +97,141 @@
       <!-- 各ページ -->
       <section class="p-contact inner">
   <div class="l-wrapper__containts">
-    <h3 class="u-text__h2 u-margin__ttl-en">Contact Form</h3>
-    <p class="u-text__subttl-jp">以下のフォームよりご連絡ください</p>
+
+    <h3 class="u-text__h2">Contact Form<br>
+      <span class="u-text__subttl-jp u-margin__subttl-jp u-margin__ttl-en-top">以下のフォームよりご連絡ください</span>
+    </h3>
     <div class="p-contact__textwrap">
       <p class="u-text__maintxt">お問い合わせは、以下のフォームをご利用ください。<br>
         弊社より追ってご連絡いたします。（<span class="red">※は必須項目となります</span>）</p>
     </div>
 
-      <form action="/contact/confirm/" method="POST">
+    <form action="/contact/confirm/" method="POST" class="js-contactForm" novalidate>
 
-        <div class="p-contact__table">
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">氏名<span class="red">※</span></p>
-            </div>
+      <div class="p-contact__table">
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">氏名<span class="red">※</span></p>
+          </div>
 
-            <div class="p-contact__td">
+          <div class="p-contact__td">
 
-              <div class="p-contact__td--inner">
+            <div class="p-contact__td--inner">
                 <label class="p-contact__td--label" for="contact-lastname">姓</label>
+                <div class="p-contact__td--content">
                 <input id="contact-lastname" type="text" name="entry.2005620554" placeholder="山田"
-                  class="p-contact__td--small p-contact__td--input" required>
-              </div>
-              <div class="p-contact__td--inner">
-                <label class="p-contact__td--label" for="contact-firstname">名</label>
-                <input id="contact-firstname" type="text" name="entry.2082196930" placeholder="太郎"
-                  class="p-contact__td--small p-contact__td--input" required>
+                  class="p-contact__td--small p-contact__td--input nameJp required maxlength" data-maxlength="50">
+                  
               </div>
 
             </div>
-          </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">氏名（カナ）<span class="red">※</span></p>
-            </div>
-            <div class="p-contact__td">
-              <div class="p-contact__td--inner">
-                <label class="p-contact__td--label" for="contact-lastnameKana">姓（カナ）</label>
-                <input id="contact-lastnameKana" type="text" name="entry.2007152598" placeholder="ヤマダ"
-                  class="p-contact__td--small p-contact__td--input" required>
-              </div>
-              <div class="p-contact__td--inner">
-                <label class="p-contact__td--label" for="contact-firstnameKana">名（カナ）</label>
-                <input id="contact-firstnameKana" type="text" name="entry.2003363469" placeholder="タロウ"
-                  class="p-contact__td--small p-contact__td--input" required>
+            <div class="p-contact__td--inner">
+              <label class="p-contact__td--label" for="contact-firstname">名</label>
+              <div class="p-contact__td--content">
+              <input id="contact-firstname" type="text" name="entry.2082196930" placeholder="太郎"
+                class="p-contact__td--small p-contact__td--input nameJp required maxlength" data-maxlength="50">
+                
               </div>
             </div>
-          </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">電話番号<span class="red">※</span></p>
-            </div>
-            <div class="p-contact__td">
-              <input id="contact-phone" class="p-contact__td--input" type="tel" name="entry.1166974658"
-                placeholder="090-0000-0000" pattern="[\d-]*" required>
-            </div>
-          </div><!--  /.p-contact__tr -->
+          </div>
+        </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">メールアドレス<span class="red">※</span></p>
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">氏名（カナ）<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--inner">
+              <label class="p-contact__td--label" for="contact-lastnameKana">姓（カナ）</label>
+              <div class="p-contact__td--content">
+              <input id="contact-lastnameKana" type="text" name="entry.2007152598" placeholder="ヤマダ"
+                class="p-contact__td--small p-contact__td--input required kana maxlength" data-maxlength="50">
+                
+              </div>
             </div>
-            <div class="p-contact__td">
-              <input id="contact-email" class="p-contact__td--input" type="email" name="entry.1045781291"
-                placeholder="example@domain.jp" required>
-            </div>
-          </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp adjustment">お問い合わせ内容<span class="red">※</span></p>
+            <div class="p-contact__td--inner">
+              <label class="p-contact__td--label" for="contact-firstnameKana">名（カナ）</label>
+              <div class="p-contact__td--content">
+              <input id="contact-firstnameKana" type="text" name="entry.2003363469" placeholder="タロウ"
+                class="p-contact__td--small p-contact__td--input required kana maxlength" data-maxlength="50">
+                
+              </div>
             </div>
-            <div class="p-contact__td--noflex">
-              <textarea id="contact-comment" class="p-contact__td--input p-contact__td--textarea" type="text"
-                name="entry.839337160" required></textarea>
-              <p class="p-contact__note u-text__notosans-jp">残り文字数:<span id="js-currentLetters">2000</span></p>
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">電話番号<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--content">
+              <input id="contact-phone" class="p-contact__td--input required tel maxlength" type="tel" name="entry.1166974658"
+                placeholder="09012345678" pattern="[\d-]*" data-maxlength="11">
+              
             </div>
+
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">メールアドレス<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--content">
+              <input id="contact-email" class="p-contact__td--input required email maxlength" type="email" name="entry.1045781291"
+                placeholder="example@domain.jp" data-maxlength="255">
+              
+            </div>
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp adjustment">お問い合わせ内容<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td--content">
+            <textarea id="contact-comment" class="p-contact__td--input p-contact__td--textarea required maxlength" type="text"
+              name="entry.839337160" data-maxlength="2000"></textarea>
             
-          </div><!--  /.p-contact__tr -->
-        </div><!--  /.p-contact__table -->
+            <p class="p-contact__note u-text__notosans-jp">残り文字数:<span id="js-currentLetters">2000</span></p>
+          </div>
 
-        <div class="p-contact__agree">
-          <label>
-            <input class="p-contact__agree--hidden" type="checkbox" name="policy" value="プライバシーポリシーに同意する" id="contact__agree">
-            <span class="p-contact__agree--link"><a href="https://leverages.jp/privacypolicy/" target="_blank" rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span>に同意する</span>
-          </label>
-        </div>
+        </div><!--  /.p-contact__tr -->
+      </div><!--  /.p-contact__table -->
 
-        <div class="c-button__common--wrapper">
-          <button type="submit" name="submit" value="入力内容の確認する" class="c-button__common" id="button__submit" disabled>
-            <span class="c-button__common--txt">入力内容の確認する</span>
-            <span class="c-button__common--arrow"></span>
-          </button>
-        </div>
+      <div class="p-contact__agree">
+        <label>
+          <input class="p-contact__agree--hidden" type="checkbox" name="policy" value="プライバシーポリシーに同意する"
+            id="contact__agree">
+          <span class="p-contact__agree--link"><a href="https://leverages.jp/privacypolicy/" target="_blank"
+              rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span>に同意する</span>
+        </label>
+      </div>
+
+      <div class="c-button__common--wrapper">
+        <button type="submit" name="submit" value="入力内容の確認する" class="c-button__common" id="button__submit" disabled>
+          <span class="c-button__common--txt">入力内容の確認する</span>
+          <span class="c-button__common--arrow"></span>
+        </button>
+      </div>
 
 
 
-      </form>
+    </form>
   </div>
 </section>
       <!-- 各ページ -->
     </main>
 
     <!-- 全ページ共通 -->
-    <section class="l-recruit-footer" id="recruit-footer">
+    <footer class="footer" id="footer">
+      <section class="l-recruit-footer" id="recruit-footer">
+  
   <div class="l-recruit-footer__imgblc">
     <div class="l-recruit-footer__imgblc--relative">
       <picture>
@@ -238,9 +267,9 @@
 
 
 </section>
-    
+      
 
-<footer class="l-footer" id="footer">
+<div class="l-footer">
   <div class="l-footer__inner inner">
     <div class="l-footer__container">
       <div class="l-footer__block">
@@ -255,20 +284,15 @@
       </div>
       <ul class="l-footer__nav">
         <li class="l-footer__nav--item"><a href="https://leverages.jp/" target="_blank" rel="noreferrer">レバレジーズ株式会社</a></li>
-        <li class="l-footer__nav--item"><a href="" target="_blank" rel="noreferrer">レバレジーズオフィスサポート株式会社</a></li>
-
+        <li class="l-footer__nav--item">レバレジーズオフィスサポート株式会社</li>
         <li class="l-footer__nav--item"><a href="https://levtech.jp/" target="_blank" rel="noreferrer">レバテック株式会社</a></li>
         <li class="l-footer__nav--item"><a href="https://leverages-medicalcare.jp/" target="_blank" rel="noreferrer">レバレジーズメディカルケア株式会社</a></li>
-
         <li class="l-footer__nav--item"><a href="https://leveragesma.jp/" target="_blank" rel="noreferrer">レバレジーズM&Aアドバイザリー株式会社</a></li>
         <li class="l-footer__nav--item"><a href="https://lc-mexico.com/" target="_blank" rel="noreferrer">Leverages Career Mexico S.A. de C.V.</a></li>
-
         <li class="l-footer__nav--item"><a href="https://vn.leveragescareer.com/?lang=ja" target="_blank" rel="noreferrer">Leverages Career Vietnam Co., Ltd.</a></li>
         <li class="l-footer__nav--item">Leverages Career India Pvt. Ltd.</li>
-
         <li class="l-footer__nav--item">Leverages Career Shanghai Co.,Ltd</li>
         <li class="l-footer__nav--item">Leverages U.S. Inc.</li>
-
         <li class="l-footer__nav--item"><a href="https://atlike.co.jp/" target="_blank" rel="noreferrer">ATLIKE株式会社</a></li>
       </ul>
     </div>
@@ -279,7 +303,8 @@
 
   </div>
 
-</footer>
+</div>
+    </footer>
   </div>
   <!-- /.wrapper -->
 

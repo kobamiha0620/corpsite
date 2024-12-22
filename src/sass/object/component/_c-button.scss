@@ -59,8 +59,17 @@
       .c-button__recruit--arrow{
         display: none;
       }
+      .c-button__recruit--txt{
+        color: g.$white;
+      }
       &::before {
         background-color: g.$bg-d2;
+      }
+      &:hover {
+        background-color: g.$bg-d2;
+        &::before{
+          transform: scaleX(0);
+        }
       }
     }
   }
@@ -160,11 +169,19 @@
       .c-button__recruit--header-arrow{
         display: none;
       }
+      .c-button__recruit--header-txt {
+        color: g.$txt-d;
+      }
+
+
       &::before{
         background-color: g.$line;
+        color: g.$txt-d;
       }
       &:hover {
         background-color: g.$line;
+        color: g.$txt-d;
+
       }
       @include g.mq(sp) {
         max-width: 292px;
@@ -263,6 +280,7 @@
         width: 292px;
         min-width: 292px;
         margin: 0 auto;
+        position: relative;
       }
       @include g.mq(sp){
         padding: 0 6.5vw;
@@ -280,6 +298,7 @@
     max-width: 292px;
     width: 100%;
     position: relative;
+    color: g.$red;
     @include g.mq(pc) {
       &::before {
         position: absolute;
@@ -372,6 +391,14 @@
     background-image: url('../img/arrow_btn-return.png');
     background-repeat: no-repeat;
     display: block;
+    @include g.mq(pc){
+      @include g.font-rem(16);
+      text-align: left;
+      width: 100%;
+      padding-left: 18px;
+      background-size: 10px 7px;
+      background-position: left center;
+    }
     @include g.mq(sp){
       @include g.font-rem(16);
       text-align: left;

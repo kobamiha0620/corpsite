@@ -1,11 +1,12 @@
-      <section class="p-home__fv" id="home__fv">
+     
+     <section class="p-home__fv" id="home__fv">
 
         <!-- PC限定 -->
         <div class="p-home__kv" id="home__kv">
           <div class="p-home__kv--wrapper">
             <picture class="p-home__kv--img">
-              <source srcset="<%= pageinit.path %>img/fv_home-pc.webp" type="image/webp" />
-              <img src="<%= pageinit.path %>img/fv_home-pc.jpg" alt="つながりは誰かを支える" width="2800" height="2259" />
+              <source srcset="<%= pageinit.path %>img/top-kv.webp" type="image/webp" />
+              <img src="<%= pageinit.path %>img/top-kv.jpg" alt="top-kv" width="2800" height="2259" />
             </picture>
           </div>
           <div class="p-home__scroll" id="js-homeScroll">
@@ -19,7 +20,7 @@
 
         <!-- 文字部分 -->
         <div class="p-home__feature" id="fixLetters">
-          <div class="p-home__feature--pfirst">
+          <h2 class="p-home__feature--pfirst">
             <p class="p-home__feature--text">
               <picture>
                 <source srcset="<%= pageinit.path %>img/fv_letter01.webp" type="image/webp" />
@@ -50,7 +51,7 @@
                 <img src="<%= pageinit.path %>img/fv_letter05.jpg" alt="は" width="228" height="288">
               </picture>
             </p>
-          </div>
+          </h2>
           <div class="p-home__feature--psecond">
             <p class="p-home__feature--text-later">
               <picture>
@@ -98,15 +99,17 @@
           <!-- SP限定 -->
           <div class="p-home__aboutus--kv">
             <picture class="p-home__kv--img">
-              <source srcset="<%= pageinit.path %>img/fv_home-sp.webp" type="image/webp" />
-              <img src="<%= pageinit.path %>img/fv_home-sp.jpg" alt="つながりは誰かを支える" width="1500" height="1500" />
+              <source srcset="<%= pageinit.path %>img/top-kv-sp.webp" type="image/webp" />
+              <img src="<%= pageinit.path %>img/top-kv-sp.jpg" alt="top-kv" width="1500" height="1500" />
             </picture>
           </div>
           <!-- SP限定 -->
 
           <div class="p-home__aboutus--inner">
-            <h2 class="u-text__h2 u-margin__ttl-en">About Us</h2>
-            <p class="u-text__subttl-jp u-margin__subttl-jp">レバレジーズスタッフィングとは</p>
+            <h3 class="u-text__h2">About Us<br>
+              <span class="u-text__subttl-jp u-margin__subttl-jp u-margin__ttl-en-top">レバレジーズスタッフィングとは</span>
+            </h3>
+          
             <p class="u-text__text u-margin__text" id="js-aboutHight">レバレジーズスタッフィングはレバレジーズのグループ会社です。<br>
               人材派遣サービス企業で、現在は看護師人材派遣サービス「レバウェル看護」、介護士人材派遣サービス「レバウェル介護」等を提供しています。</p>
             <p class="u-text__text">
@@ -118,35 +121,31 @@
 
       <section class="p-home__bnrlink inner" id="home__bnrlink">
 
-        <div class="c-bnrlink__wrapper">
+        <a class="c-bnrlink__wrapper" href="<%= pageinit.path %>company/">
           <span class="c-bnrlink__line">
-            <a class="c-bnrlink" href="<%= pageinit.path %>company/">
+            <div class="c-bnrlink">
               <div class="c-bnrlink__block">
                 <p class="c-bnrlink__ttl u-text__opensans">COMPANY</p>
                 <p class="c-bnrlink__subttl u-text__notosans-jp">会社概要</p>
                 <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
               </div>
               <div class="c-bnrlink__bg company"></div>
-            </a>
-          </span>
-        </div>
-
-
-        <div class="c-bnrlink__wrapper">
-          <span class="c-bnrlink__line">
-            <div class="c-bnrlink__contents--wrapper">
-              <a class="c-bnrlink c-multi" href="<%= pageinit.path %>environment/">
-                <div class="c-bnrlink__block">
-                  <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
-                  <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
-                  <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
-                </div>
-                <div class="c-bnrlink__bg environment"></div>
-              </a>
-
             </div>
-
           </span>
-        </div>
+        </a>
+
+
+        <a class="c-bnrlink__wrapper c-multi" href="<%= pageinit.path %>environment/">
+          <span class="c-bnrlink__line">
+            <div class="c-bnrlink c-multi">
+              <div class="c-bnrlink__block">
+                <p class="c-bnrlink__ttl u-text__opensans">ENVIRONMENT</p>
+                <p class="c-bnrlink__subttl u-text__notosans-jp">働く環境</p>
+                <p class="c-bnrlink__txt u-text__notosans-jp">詳しく見る</p>
+              </div>
+              <div class="c-bnrlink__bg environment"></div>
+            </div>
+          </span>
+        </a>
 
       </section>

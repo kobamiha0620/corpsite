@@ -24,29 +24,37 @@
   }
   &__imgblc--relative{
     @include g.mq(pc) {
+      background-color: #708B9B;
+
       position: relative;
+      min-height: 140px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img{
-        width: 50vw;
-        height: 140px;
+        width: 100%;
+        height: auto;
         position: absolute;
-        right: 0;
-        top:0;
-        object-fit: cover;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
+
     }
 
   }
-  @media screen and (max-width: 1024px) {
-    background-image: url('../img/bg_footer-recruit-sp.jpg');
+  @media screen and (max-width: 1023px) {
+    background-image: url('../img/bg_footer-recruit-sp.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
   }
 
   @media screen and (max-width: 494px) {
-    background-image: url('../img/bg_footer-recruit-sp.jpg');
+    background-image: url('../img/bg_footer-recruit-sp.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: 494px 338px;
   }
   &__contents{

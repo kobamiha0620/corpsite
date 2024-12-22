@@ -1,6 +1,14 @@
 @use "../../global/" as g;
 
 .u-margin{
+  &__ttl-en-top{ 
+    @include g.mq(pc){
+      margin-top: 12px;
+    }
+    @include g.mq(sp){
+      margin-top: 12px;
+    }
+  }
   &__ttl-en{ 
     @include g.mq(pc){
       margin-bottom: 12px;

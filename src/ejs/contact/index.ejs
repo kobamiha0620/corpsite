@@ -1,6 +1,6 @@
 <%
 const pageinit = {
-  title : 'お問い合わせ | レバレジーズスタッフィング株式会社' ,
+  title : 'レバレジーズスタッフィング株式会社' ,
   keywords : '' ,
   sitename: 'レバレジーズスタッフィング株式会社',
   description : 'レバレジーズスタッフィング株式会社へのお問い合わせです。' ,
@@ -8,7 +8,7 @@ const pageinit = {
   ogimage: 'https://leverages-staffing.jp/img/ogp.jpg',
   path : '../' ,
   type: 'website',
-  pagename : 'レバレジーズスタッフィング株式会社',
+  pagename : 'お問い合わせ',
   robots : ['index', 'follow'],
   id: 'contact',
   js:'contact',
@@ -30,7 +30,7 @@ const pageinit = {
 <html lang="ja" class="lang-jp" data-script-enabled="true">
 <%- include(pageinit.path + 'module/_head.ejs',{ pageinit:pageinit }) %>
 
-<body id="<%= pageinit.id %>">
+<body id="<%= pageinit.id %>" ontouchstart="">
   <!-- 全ページ共通 -->
   <div class="wrapper">
     <%- include(pageinit.path + 'module/_header.ejs', { pageinit:pageinit }) %>
@@ -43,8 +43,10 @@ const pageinit = {
     </main>
 
     <!-- 全ページ共通 -->
-    <%- include(pageinit.path + 'module/_recruit-footer.ejs', { pageinit:pageinit }) %>
-    <%- include(pageinit.path + 'module/_footer.ejs', { pageinit:pageinit }) %>
+    <footer class="footer" id="footer">
+      <%- include(pageinit.path + 'module/_recruit-footer.ejs', { pageinit:pageinit }) %>
+      <%- include(pageinit.path + 'module/_footer.ejs', { pageinit:pageinit }) %>
+    </footer>
   </div>
   <!-- /.wrapper -->
 

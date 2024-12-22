@@ -1,7 +1,9 @@
 <section class="p-contact inner">
   <div class="l-wrapper__containts">
-    <h3 class="u-text__h2 u-margin__ttl-en">Contact Form</h3>
-    <p class="u-text__subttl-jp">ご入力内容をご確認ください</p>
+
+    <h3 class="u-text__h2">Contact Form<br>
+      <span class="u-text__subttl-jp u-margin__subttl-jp u-margin__ttl-en-top">ご入力内容をご確認ください</span>
+    </h3>
     <div class="p-contact__textwrap">
       <p class="u-text__maintxt">ご入力内容に間違いがないかご確認のうえ、<br>
         「送信する」を選択してお問い合わせ申込を完了してください。<br>
@@ -111,6 +113,14 @@
           <span class="c-button__common--txt">送信する</span>
           <span class="c-button__common--arrow"></span>
         </button>
+        <div class="pc">
+          <div class="p-contact__returnbtn">
+            <button class="c-button__return" type="button" name="button" onclick="history.back()">
+              <span>戻る</span>
+            </button> 
+          </div>
+        </div>
+    
       </div>
 
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/contact/thanks/';}"></iframe>
@@ -123,8 +133,8 @@
           <span>戻る</span>
         </button> 
       </div>
-
     </div>
+
 
 
 

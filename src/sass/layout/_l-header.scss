@@ -76,6 +76,9 @@
     text-decoration: none;
     font-family: "Noto Sans JP", serif;
     line-height: 100%;
+    color: g.$color;
+
+
     @include g.mq(pc) {
       font-weight: 600; //semibold
       @include g.font-rem(14);
@@ -95,7 +98,7 @@
         background: g.$red;
         bottom: -6px;
         transform: scale(0, 1);
-        transition: transform 0.25s;
+        transition: transform 0.4s;
         transform-origin: center top;
       }
       &:hover{
@@ -123,22 +126,22 @@
     @include g.mq(pc) {
       display: flex;
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       padding: 32px 0;
-      background-image: url('../img/bg_footer-recruit-sp.jpg');
+      background-image: url('../img/bg_footer-recruit-sp.png');
       background-size: 100% auto;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top center;
     }
     @media screen and (max-width: 494px) {
       padding: 32px 0;
-      background-image: url('../img/bg_footer-recruit-sp.jpg');
+      background-image: url('../img/bg_footer-recruit-sp.png');
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top center;
       background-size: 494px 338px;
     }
     @include g.mq(sp){
-      position: sticky;
+      // position: absolute;
       bottom: 0;
       width: 100%;
 
@@ -189,19 +192,24 @@
   }
   &__modal{
     @include g.mq(sp){
-      height: calc(100dvh - 59px);
-      height: calc(100vh - 59px);
+      height: calc(100dvh - g.$spHeader);
+      height: calc(100vh - g.$spHeader);
       width: 100vw;
       background: #FFF;
-      z-index: 3;
       position: fixed;
-      transition: all 500ms;
-      top: -101vh;
+      transition: all 400ms;
+      // top: calc((101vh + 600px) * -1);
       right: 0;
+      top: g.$spHeader;
+      opacity: 0;
+      animation: fadeout 0.4s;
+      visibility: hidden;
 
       &.is-checked{
-        right: 0;
-        top: 59px;
+        overflow-y: scroll;
+        opacity: 1;
+        animation: fadein 0.4s;
+        visibility: visible;
       }
     }
   }
@@ -213,11 +221,31 @@
     @include g.mq(sp){
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      height: calc(100vh - g.$spHeader);
+      height:  calc(100dvh - g.$spHeader);
     }
   }
 }
 
+//Animation
+
+.fadeout {
+  opacity: 1;
+  animation: fadeout 0.4s;
+}
+.fadein {
+  opacity: 0;
+  animation: fadein 0.4s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 
 
 #header__modal-input {
@@ -235,8 +263,6 @@
   }
   &.active{
     background: transparent;
-
-
     & ~ #header__modal{
       visibility: visible;
 
@@ -244,33 +270,13 @@
   }
 }
 
-// body {
-//   animation: bugfix infinite 1s;
-//   -webkit-animation: bugfix infinite 1s;
-// }
-
-// @keyframes bugfix {
-//   from {
-//     padding: 0;
-//   }
-//   to {
-//     padding: 0;
-//   }
-// }
-// @-webkit-keyframes bugfix {
-//   from {
-//     padding: 0;
-//   }
-//   to {
-//     padding: 0;
-//   }
-// }
-
 body#home{
   .l-header__nav--item--home{
     a{
-      pointer-events: none;
+      display: block;
       @include g.mq(pc) {
+        pointer-events: none;
+
         &::after{
           transform: scale(1, 1);
         }
@@ -281,8 +287,10 @@ body#home{
 body#company{
   .l-header__nav--item--company{
     a{
-      pointer-events: none;
+      display: block;
       @include g.mq(pc) {
+        pointer-events: none;
+
         &::after{
           transform: scale(1, 1);
         }
@@ -294,8 +302,9 @@ body#company{
 body#environment{
   .l-header__nav--item--environment{
     a{
-      pointer-events: none;
+      display: block;
       @include g.mq(pc) {
+        pointer-events: none;
         &::after{
           transform: scale(1, 1);
         }
@@ -309,8 +318,9 @@ body#contact_confirm,
 body#contact_thanks{
   .l-header__nav--item--contact{
     a{
-      pointer-events: none;
+      display: block;
       @include g.mq(pc) {
+        pointer-events: none;
         &::after{
           transform: scale(1, 1);
         }

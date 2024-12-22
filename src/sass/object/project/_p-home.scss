@@ -1,12 +1,11 @@
 @use "../../global/"as g;
 
 .p-home {
+  position: relative;
   @include g.mq(sp) {
-    margin-top: -80px;
   }
 
   @include g.mq(sp) {
-    margin-top: -60px;
   }
 
   &__fv {
@@ -15,12 +14,11 @@
 
 
   &__kv--wrapper {
-
     @include g.mq(pc) {
       width: 100%;
       padding-left: 25vw;
       height: calc(100vh - g.$pcHeader);
-
+      max-height: calc(100vh - g.$pcHeader);
       img {
         width: auto;
         height: 100%;
@@ -42,8 +40,11 @@
     @include g.mq(pc) {
       position: relative;
       overflow: hidden;
+      height: 100vh;
+      max-height: 100vh;
       height: calc(100vh - g.$pcHeader);
       max-height: calc(100vh - g.$pcHeader);
+
       &::before {
         animation: img-wrap 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         background: g.$bg;
@@ -74,9 +75,9 @@
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
-    @media screen and (min-width: 1280px) {
-      left: calc(50vw - 550px);
-    }
+    // @media screen and (min-width: 1280px) {
+    //   left: calc(50vw - 550px);
+    // }
 
     @include g.mq(sp) {
       display: none;
@@ -175,16 +176,7 @@
   }
   &__feature--wrapper{
     @include g.mq(pc){
-      // top: g.$pcHeader;
-      // position: fixed;
-      // left: calc(50%);
-      // transform: translate(-50%, 0);
-      // width: 1000px;
-      // margin: 0 auto;
-      // display: block;
-      // &.sticky{
-      //   position: absolute;
-      // }
+
     }
   }
   &__feature--wrapper-flx{

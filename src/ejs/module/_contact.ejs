@@ -1,103 +1,130 @@
 <section class="p-contact inner">
   <div class="l-wrapper__containts">
-    <h3 class="u-text__h2 u-margin__ttl-en">Contact Form</h3>
-    <p class="u-text__subttl-jp">以下のフォームよりご連絡ください</p>
+
+    <h3 class="u-text__h2">Contact Form<br>
+      <span class="u-text__subttl-jp u-margin__subttl-jp u-margin__ttl-en-top">以下のフォームよりご連絡ください</span>
+    </h3>
     <div class="p-contact__textwrap">
       <p class="u-text__maintxt">お問い合わせは、以下のフォームをご利用ください。<br>
         弊社より追ってご連絡いたします。（<span class="red">※は必須項目となります</span>）</p>
     </div>
 
-      <form action="/contact/confirm/" method="POST">
+    <form action="/contact/confirm/" method="POST" class="js-contactForm" novalidate>
 
-        <div class="p-contact__table">
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">氏名<span class="red">※</span></p>
-            </div>
+      <div class="p-contact__table">
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">氏名<span class="red">※</span></p>
+          </div>
 
-            <div class="p-contact__td">
+          <div class="p-contact__td">
 
-              <div class="p-contact__td--inner">
+            <div class="p-contact__td--inner">
                 <label class="p-contact__td--label" for="contact-lastname">姓</label>
+                <div class="p-contact__td--content">
                 <input id="contact-lastname" type="text" name="entry.<%= pageinit.lastName %>" placeholder="山田"
-                  class="p-contact__td--small p-contact__td--input" required>
-              </div>
-              <div class="p-contact__td--inner">
-                <label class="p-contact__td--label" for="contact-firstname">名</label>
-                <input id="contact-firstname" type="text" name="entry.<%= pageinit.firstName %>" placeholder="太郎"
-                  class="p-contact__td--small p-contact__td--input" required>
+                  class="p-contact__td--small p-contact__td--input nameJp required maxlength" data-maxlength="50">
+                  
               </div>
 
             </div>
-          </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">氏名（カナ）<span class="red">※</span></p>
-            </div>
-            <div class="p-contact__td">
-              <div class="p-contact__td--inner">
-                <label class="p-contact__td--label" for="contact-lastnameKana">姓（カナ）</label>
-                <input id="contact-lastnameKana" type="text" name="entry.<%= pageinit.lastNameKana %>" placeholder="ヤマダ"
-                  class="p-contact__td--small p-contact__td--input" required>
-              </div>
-              <div class="p-contact__td--inner">
-                <label class="p-contact__td--label" for="contact-firstnameKana">名（カナ）</label>
-                <input id="contact-firstnameKana" type="text" name="entry.<%= pageinit.firstNamekana %>" placeholder="タロウ"
-                  class="p-contact__td--small p-contact__td--input" required>
+            <div class="p-contact__td--inner">
+              <label class="p-contact__td--label" for="contact-firstname">名</label>
+              <div class="p-contact__td--content">
+              <input id="contact-firstname" type="text" name="entry.<%= pageinit.firstName %>" placeholder="太郎"
+                class="p-contact__td--small p-contact__td--input nameJp required maxlength" data-maxlength="50">
+                
               </div>
             </div>
-          </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">電話番号<span class="red">※</span></p>
-            </div>
-            <div class="p-contact__td">
-              <input id="contact-phone" class="p-contact__td--input" type="tel" name="entry.<%= pageinit.tel %>"
-                placeholder="090-0000-0000" pattern="[\d-]*" required>
-            </div>
-          </div><!--  /.p-contact__tr -->
+          </div>
+        </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp">メールアドレス<span class="red">※</span></p>
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">氏名（カナ）<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--inner">
+              <label class="p-contact__td--label" for="contact-lastnameKana">姓（カナ）</label>
+              <div class="p-contact__td--content">
+              <input id="contact-lastnameKana" type="text" name="entry.<%= pageinit.lastNameKana %>" placeholder="ヤマダ"
+                class="p-contact__td--small p-contact__td--input required kana maxlength" data-maxlength="50">
+                
+              </div>
             </div>
-            <div class="p-contact__td">
-              <input id="contact-email" class="p-contact__td--input" type="email" name="entry.<%= pageinit.mail %>"
-                placeholder="example@domain.jp" required>
-            </div>
-          </div><!--  /.p-contact__tr -->
 
-          <div class="p-contact__tr">
-            <div class="p-contact__th">
-              <p class="p-contact__input-ttl u-text__notosans-jp adjustment">お問い合わせ内容<span class="red">※</span></p>
+            <div class="p-contact__td--inner">
+              <label class="p-contact__td--label" for="contact-firstnameKana">名（カナ）</label>
+              <div class="p-contact__td--content">
+              <input id="contact-firstnameKana" type="text" name="entry.<%= pageinit.firstNamekana %>" placeholder="タロウ"
+                class="p-contact__td--small p-contact__td--input required kana maxlength" data-maxlength="50">
+                
+              </div>
             </div>
-            <div class="p-contact__td--noflex">
-              <textarea id="contact-comment" class="p-contact__td--input p-contact__td--textarea" type="text"
-                name="entry.<%= pageinit.context %>" required></textarea>
-              <p class="p-contact__note u-text__notosans-jp">残り文字数:<span id="js-currentLetters">2000</span></p>
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">電話番号<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--content">
+              <input id="contact-phone" class="p-contact__td--input required tel maxlength" type="tel" name="entry.<%= pageinit.tel %>"
+                placeholder="09012345678" pattern="[\d-]*" data-maxlength="11">
+              
             </div>
+
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp">メールアドレス<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td">
+            <div class="p-contact__td--content">
+              <input id="contact-email" class="p-contact__td--input required email maxlength" type="email" name="entry.<%= pageinit.mail %>"
+                placeholder="example@domain.jp" data-maxlength="255">
+              
+            </div>
+          </div>
+        </div><!--  /.p-contact__tr -->
+
+        <div class="p-contact__tr">
+          <div class="p-contact__th">
+            <p class="p-contact__input-ttl u-text__notosans-jp adjustment">お問い合わせ内容<span class="red">※</span></p>
+          </div>
+          <div class="p-contact__td--content">
+            <textarea id="contact-comment" class="p-contact__td--input p-contact__td--textarea required maxlength" type="text"
+              name="entry.<%= pageinit.context %>" data-maxlength="2000"></textarea>
             
-          </div><!--  /.p-contact__tr -->
-        </div><!--  /.p-contact__table -->
+            <p class="p-contact__note u-text__notosans-jp">残り文字数:<span id="js-currentLetters">2000</span></p>
+          </div>
 
-        <div class="p-contact__agree">
-          <label>
-            <input class="p-contact__agree--hidden" type="checkbox" name="policy" value="プライバシーポリシーに同意する" id="contact__agree">
-            <span class="p-contact__agree--link"><a href="https://leverages.jp/privacypolicy/" target="_blank" rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span>に同意する</span>
-          </label>
-        </div>
+        </div><!--  /.p-contact__tr -->
+      </div><!--  /.p-contact__table -->
 
-        <div class="c-button__common--wrapper">
-          <button type="submit" name="submit" value="入力内容の確認する" class="c-button__common" id="button__submit" disabled>
-            <span class="c-button__common--txt">入力内容の確認する</span>
-            <span class="c-button__common--arrow"></span>
-          </button>
-        </div>
+      <div class="p-contact__agree">
+        <label>
+          <input class="p-contact__agree--hidden" type="checkbox" name="policy" value="プライバシーポリシーに同意する"
+            id="contact__agree">
+          <span class="p-contact__agree--link"><a href="https://leverages.jp/privacypolicy/" target="_blank"
+              rel="noreferrer">プライバシーポリシー</a><span class="p-contact__agree--linkimg"></span>に同意する</span>
+        </label>
+      </div>
+
+      <div class="c-button__common--wrapper">
+        <button type="submit" name="submit" value="入力内容の確認する" class="c-button__common" id="button__submit" disabled>
+          <span class="c-button__common--txt">入力内容の確認する</span>
+          <span class="c-button__common--arrow"></span>
+        </button>
+      </div>
 
 
 
-      </form>
+    </form>
   </div>
 </section>

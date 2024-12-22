@@ -11,7 +11,12 @@ body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  color: g.$color;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
+
   font-family: "Noto Sans JP", "Open Sans", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", sans-serif;
+
 }
 
 
@@ -19,18 +24,27 @@ body {
   color-scheme: light;
 }
 
+
 .wrapper{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  height: 100dvh;
-  height: 100vh;
+
+  height: 100%;
 }
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  @include g.mq(pc){
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  @include g.mq(sp){
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
 }
+
+
 main {
   flex-grow: 1;
 }
@@ -48,6 +62,7 @@ main {
   }
 }
 
+
 .pc{
   @include g.mq(pc) {
     display: block;
@@ -56,6 +71,16 @@ main {
     display: none;
   }
 }
+.tb{
+  @media screen and (max-width: 430px){
+    display: none;
+  }
+  @media screen and (min-width: 431px){
+    display: block;
+  }
+}
+
+
 
 .sp{
   @include g.mq(pc) {

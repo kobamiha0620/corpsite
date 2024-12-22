@@ -7,6 +7,5 @@ countTxt();
 import {setupAgreeCheckboxListener} from "./module/agree";
 setupAgreeCheckboxListener();
 
-// import { observeElement, main } from "./module/confirm";
-// observeElement();
-// main();
+import { initializeValidation } from './module/confirm.js';
+initializeValidation();

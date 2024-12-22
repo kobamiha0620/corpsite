@@ -112,6 +112,7 @@
     color: g.$red;
     border-left: solid 2px g.$red;
     padding-left: 8px;
+    display: block;
     @include g.mq(pc) {
       @include g.font-rem(14);
     }
@@ -281,5 +282,10 @@
     @include g.mq(sp) {
       @include g.font-rem(10);
     }
+  }
+  &__sup{
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.7em;
   }
 }
