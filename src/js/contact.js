@@ -1,5 +1,6 @@
-import { setupDrawer } from "./module/drawer";
+import { setupDrawer, resetDrawerOnResize } from "./module/drawer";
 setupDrawer();
+resetDrawerOnResize();
 
 import {countTxt} from "./module/textcount";
 countTxt();

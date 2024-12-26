@@ -28,6 +28,19 @@ function setupDrawer() {
       document.body.style.overflow = "";
     });
   });
+  window.addEventListener("resize", resetDrawerOnResize);
+
 }
 
-export { setupDrawer };
+function resetDrawerOnResize() {
+  if (window.innerWidth > 1024) { // １０２４pxを超える場合にリセット
+    drawerIcon.classList.remove("is-checked");
+    drawerContent.classList.remove("is-checked");
+    btnlabel.classList.remove("is-checked");
+    document.body.style.overflow = "";
+  }
+}
+
+
+
+export { setupDrawer, resetDrawerOnResize };

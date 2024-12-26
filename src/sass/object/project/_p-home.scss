@@ -29,8 +29,8 @@
       }
     }
     @media screen and (min-width: 1280px) {
-      padding-left: 50%;
-      padding-left: calc(50vw - 250px);
+      // padding-left: calc(50vw - 250px);
+      padding-left: 25vw;
     }
     @include g.mq(sp) {
     }
@@ -84,13 +84,13 @@
     }
     &.fadeOut {
       animation-name: fade-out;
-      animation-duration: 0.6s;
+      animation-duration: 0.4s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
     &.fadeIn {
       animation-name: fade-in;
-      animation-duration: 0.6s;
+      animation-duration: 0.4s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
@@ -156,15 +156,18 @@
   &__feature {
     @include g.mq(pc){
       top: calc(35vh + g.$pcHeader);
-      position: fixed;
-      left: calc(50%);
-      transform: translate(-50%, 0);
-      width: 1000px;
+      top: 35vh;
+
+      position: absolute;
+      // left: calc(50%);
+      left: 10.9vw;
+      // transform: translate(-50%, 0);
+      // width: 1000px;
       margin: 0 auto;
       display: block;
-      &.sticky{
-        position: absolute;
-      }
+      // &.sticky{
+      //   position: absolute;
+      // }
 
     }
     @include g.mq(sp){
@@ -172,11 +175,11 @@
       top: 94vw;
       left: 4.6vw;
       z-index: 2;
+      
     }
   }
   &__feature--wrapper{
     @include g.mq(pc){
-
     }
   }
   &__feature--wrapper-flx{
@@ -196,7 +199,6 @@
     }
     @include g.mq(sp){
       margin-bottom: 16px;
-
     }
   }
 
@@ -213,14 +215,19 @@
     animation: textanimation 0.7s forwards;
   
     @include g.mq(pc){
-      img{
-        height: 5vw;
-        max-height: 90px;
-        width: auto;
+      // img{
+      //   height: 7.6vh;
+      //   // max-height: 90px;
+      //   width: auto;
+      // }
+      @include g.mq(pc){
+        width: 5.41vw;
+        height: auto;
       }
     }
     @include g.mq(sp){
       // @include g.font-rem(42);
+
       img{
         height: 14.2vw;
         width: auto;
@@ -230,6 +237,8 @@
     /* 1文字目 */
     &:nth-child(1) {
       animation-delay: 0.15s;
+      animation: textanimation 0.7s forwards;
+
     }
 
     /* 2文字目 */
@@ -286,15 +295,14 @@
     margin: 0 -1px;
 
     @include g.mq(pc){
-      // @include g.font-rem(64);
       img{
-        height: 5vw;
-        max-height: 90px;
-        width: auto;
+        // height: 5vw;
+        // max-height: 90px;
+        height: 100%;
+        width: 5.35vw;
       }
     }
     @include g.mq(sp){
-      // @include g.font-rem(42);
       img{
         height: 14.2vw;
         width: auto;
@@ -369,6 +377,36 @@
       margin: 0 auto;
     }
   }
+  &__aboutus--feature{
+    @include g.mq(pc) {
+      position: absolute;
+      width: 406px;
+      left: 16px;
+      top: 290px;
+      opacity: 0;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      &.fadeOut {
+        animation-name: fade-out;
+        animation-duration: 0.6s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+      }
+      &.fadeIn {
+        animation-name: fade-in;
+        animation-duration: 0.6s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
+    @include g.mq(sp) {
+      display: none;
+    }
+
+  }
+
   &__aboutus--kv{
     @include g.mq(pc) {
       display: none;
