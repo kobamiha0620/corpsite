@@ -11,8 +11,6 @@ const pageinit = {
   pagename : '働く環境',
   robots : ['index', 'follow'],
   id: 'environment',
-  js:'environment',
-  // jsfunc:[]
 };
 %>
 
@@ -21,28 +19,20 @@ const pageinit = {
 <%- include(pageinit.path + 'module/_head.ejs',{ pageinit:pageinit }) %>
 
 <body id="<%= pageinit.id %>" ontouchstart="">
-  <!-- 全ページ共通 -->
   <div class="wrapper">
     <%- include(pageinit.path + 'module/_header.ejs', { pageinit:pageinit }) %>
-    <!-- 全ページ共通 -->
 
     <main class="l-main" id="main">
-      <!-- 各ページ -->
       <%- include(pageinit.path + 'module/_environment.ejs', { pageinit:pageinit }) %>
-      <!-- 各ページ -->
     </main>
 
-    <!-- 全ページ共通 -->
     <footer class="footer" id="footer">
       <%- include(pageinit.path + 'module/_recruit-footer.ejs', { pageinit:pageinit }) %>
       <%- include(pageinit.path + 'module/_footer.ejs', { pageinit:pageinit }) %>
     </footer>
   </div>
-  <!-- /.wrapper -->
 
-  <script type="text/javascript" src="<%= pageinit.path %>js/<%= pageinit.js %>.js"></script>
-  <!-- 全ページ共通 -->
-
+  <script type="text/javascript" src="<%= pageinit.path %>assets/js/main.js"></script>
 
 </body>
 

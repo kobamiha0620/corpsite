@@ -78,7 +78,7 @@
     position: relative;
     color: g.$white;
     font-family: "Noto Sans JP", serif;
-    font-weight: 600; //Regular
+    font-weight: 600;
     line-height: 100%;
     letter-spacing: 0.06em;
     transition: all 0.3s ease-in-out;
@@ -195,7 +195,7 @@
     position: relative;
     color: g.$white;
     font-family: "Noto Sans JP", serif;
-    font-weight: 600; //Regular
+    font-weight: 600;
     line-height: 100%;
     letter-spacing: 0.06em;
 
@@ -242,7 +242,7 @@
     color: g.$txt-d;
     text-align: center;
     font-family: "Noto Sans JP", serif;
-    font-weight: 600; //Regular
+    font-weight: 600;
     line-height: 100%;
     letter-spacing: 0.06em;
     white-space: nowrap;
@@ -409,7 +409,6 @@
     }
   }
 
-  //ヘッダー--
   &__modal {
     height: 60px;
     width: 60px;
@@ -426,7 +425,6 @@
     .burger {
       filter: url(#gooeyness);
       transform: translateZ(0);
-      // will-change: filter;
     }
 
     .x {

@@ -1,6 +1,7 @@
 export function toTopback(){
-  setTimeout(function(){
-    window.location.href = '/';
-  }, 5*1000);
+  if (window.location.pathname === '/contact/thanks/') {
+    setTimeout(function(){
+      window.location.href = '/';
+    }, 5*1000);
+  }
 }
-  

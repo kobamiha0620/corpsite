@@ -11,10 +11,12 @@ function updateSubmitButtonState(checkbox, button) {
 function setupAgreeCheckboxListener() {
   const agreeCheckbox = document.getElementById("contact__agree");
   const submitBtn = document.getElementById("button__submit");
+  if (agreeCheckbox) {
+    agreeCheckbox.addEventListener("click", () => {
+      updateSubmitButtonState(agreeCheckbox, submitBtn);
+    });
+  }
 
-  agreeCheckbox.addEventListener("click", () => {
-    updateSubmitButtonState(agreeCheckbox, submitBtn);
-  });
 }
 
 // 必要に応じてエクスポート

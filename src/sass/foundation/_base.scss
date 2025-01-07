@@ -1,10 +1,4 @@
-// // 基本の文字サイズやフォントファミリーなどの追加
-// @forward "../global/variable/v-breakpoint" as bp;
-
-// @forward "v-font" as font;
 @use "../global/" as g;
-
-@charset "UTF-8";
 
 body {
   background-color: g.$bg;

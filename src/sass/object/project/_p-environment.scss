@@ -1,9 +1,6 @@
 @use "../../global/"as g;
 
 .p-environment {
-  &__introduce {
-
-  }
 
   &__introduce--inner {
     @include g.mq(pc) {

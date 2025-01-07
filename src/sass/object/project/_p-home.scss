@@ -29,7 +29,6 @@
       }
     }
     @media screen and (min-width: 1280px) {
-      // padding-left: calc(50vw - 250px);
       padding-left: 25vw;
     }
     @include g.mq(sp) {
@@ -75,9 +74,7 @@
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
-    // @media screen and (min-width: 1280px) {
-    //   left: calc(50vw - 550px);
-    // }
+
 
     @include g.mq(sp) {
       display: none;
@@ -157,18 +154,10 @@
     @include g.mq(pc){
       top: calc(35vh + g.$pcHeader);
       top: 35vh;
-
       position: absolute;
-      // left: calc(50%);
       left: 10.9vw;
-      // transform: translate(-50%, 0);
-      // width: 1000px;
       margin: 0 auto;
       display: block;
-      // &.sticky{
-      //   position: absolute;
-      // }
-
     }
     @include g.mq(sp){
       position: absolute;
@@ -184,10 +173,7 @@
   }
   &__feature--wrapper-flx{
     @include g.mq(pc){
-    // padding-top: 5.8vh;
-    // display: flex;
-    // align-items: center;
-    // width: 1000px;
+
     }
   }
   &__feature--pfirst {
@@ -211,22 +197,13 @@
 
     margin: 0 -1px;
     opacity: 0;
-    /* 文字を透明化 */
     animation: textanimation 0.7s forwards;
   
     @include g.mq(pc){
-      // img{
-      //   height: 7.6vh;
-      //   // max-height: 90px;
-      //   width: auto;
-      // }
-      @include g.mq(pc){
-        width: 5.41vw;
-        height: auto;
-      }
+      width: 5.41vw;
+      height: auto;
     }
     @include g.mq(sp){
-      // @include g.font-rem(42);
 
       img{
         height: 14.2vw;
@@ -271,17 +248,14 @@
       animation-delay: 1.15s;
     }
 
-    /* 8文字目 */
     &:nth-child(8) {
       animation-delay: 1.3s;
     }
 
-    /* 9文字目 */
     &:nth-child(9) {
       animation-delay: 1.45s;
     }
 
-    /* 10文字目 */
     &:nth-child(10) {
       animation-delay: 1.6s;
     }
@@ -290,14 +264,11 @@
 
   &__feature--text-later {
     opacity: 0;
-    /* 文字を透明化 */
     animation: textanimation 1s forwards;
     margin: 0 -1px;
 
     @include g.mq(pc){
       img{
-        // height: 5vw;
-        // max-height: 90px;
         height: 100%;
         width: 5.35vw;
       }
@@ -412,7 +383,6 @@
       display: none;
     }
     @include g.mq(sp) {
-      // padding-bottom: 28.5vw;
       margin-right: -4.6vw;
       margin-left: -4.6vw;
       height: 100vw;

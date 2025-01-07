@@ -11,9 +11,8 @@
   <title>確認ページ | レバレジーズスタッフィング株式会社</title>
 
   <link rel="canonical" href="https://leverages.jp/" />
-  <link rel="icon" href="../../img/favicon.ico">
-  <!-- iOS Safari and Chrome -->
-  <link rel="apple-touch-icon" sizes="192x192" href="../../img/touch-icon.png">
+  <link rel="icon" href="../../assets/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="../../assets/img/touch-icon.png">
 
   <meta property="og:title" content="レバレジーズスタッフィング株式会社" />
   <meta property="og:description" content="レバレジーズスタッフィング株式会社のコーポレートサイトです。会社概要・採用情報などについて紹介しています。" />
@@ -26,13 +25,12 @@
   <meta name="theme-color" content="#FFFFFF" />
 
 
-  <!-- Font -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <!-- Font -->
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
 
 
 </head>
@@ -40,7 +38,6 @@
 
 
 <body id="contact_confirm" ontouchstart="">
-  <!-- 全ページ共通 -->
   <div class="wrapper">
     <header class="l-header" id="header">
   <div class="l-header__inner">
@@ -75,8 +72,6 @@
           </div>
           <div class="l-header__apply--mid">
             <span class="c-button__recruit--header disabled">
-            <!-- <a href="< %= pageinit.path recruit/mid-career/" class="c-button__recruit--header"> -->
-
               <span class="c-button__recruit--header-txt">中途採用</span>
               <span class="c-button__recruit--header-arrow"></span>
             </span>
@@ -89,12 +84,9 @@
     </div>
 
   </div>
-  <!-- /.l-header__inner -->
 </header>
-    <!-- 全ページ共通 -->
 
     <main class="l-main" id="main">
-      <!-- 各ページ -->
       <section class="p-contact inner">
   <div class="l-wrapper__containts">
 
@@ -135,7 +127,7 @@
             </div>
 
           </div>
-        </div><!--  /.p-contact__tr -->
+        </div>
 
         <div class="p-contact__tr">
           <div class="p-contact__th">
@@ -159,7 +151,7 @@
 
           </div>
 
-        </div><!--  /.p-contact__tr -->
+        </div>
 
         <div class="p-contact__tr">
           <div class="p-contact__th">
@@ -170,7 +162,7 @@
             <input type="hidden" id="contact-phone" class="p-contact__td--input" name="entry.1166974658"
               value="<?php echo $_POST['entry_1166974658']; ?>">
           </div>
-        </div><!--  /.p-contact__tr -->
+        </div>
 
         <div class="p-contact__tr">
           <div class="p-contact__th">
@@ -181,7 +173,7 @@
             <input type="hidden" id="contact-email" class="p-contact__td--input" name="entry.1045781291"
               value="<?php echo $_POST['entry_1045781291']; ?>">
           </div>
-        </div><!--  /.p-contact__tr -->
+        </div>
 
         <div class="p-contact__tr">
           <div class="p-contact__th">
@@ -192,9 +184,9 @@
             <input type="hidden" id="contact-comment" class="p-contact__td--input p-contact__td--textarea"
               name="entry.839337160" value="<?php echo $_POST['entry_839337160']; ?>">
           </div>
-        </div><!--  /.p-contact__tr -->
+        </div>
         
-      </div><!--  /.p-contact__table -->
+      </div>
 
       <div class="p-contact__agree">
         <label>
@@ -221,7 +213,6 @@
       </div>
 
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/contact/thanks/';}"></iframe>
-      <!-- <script type="text/javascript">let submitted = false;</script> -->
     </form>
 
     <div class="sp">
@@ -233,24 +224,18 @@
     </div>
 
 
-
-
-
-  
   </div>
 </section>
-      <!-- 各ページ -->
     </main>
 
-    <!-- 全ページ共通 -->
     <footer class="footer" id="footer">
       <section class="l-recruit-footer" id="recruit-footer">
   
   <div class="l-recruit-footer__imgblc">
     <div class="l-recruit-footer__imgblc--relative">
       <picture>
-        <source srcset="../../img/bg_footer-recruit-pc.webp" type="image/webp" />
-        <img src="../../img/bg_footer-recruit-pc.jpg" alt="JOIN US" width="1302" height="845">
+        <source srcset="../../assets/img/bg_footer-recruit-pc.webp" type="image/webp" />
+        <img src="../../assets/img/bg_footer-recruit-pc.jpg" alt="JOIN US" width="1302" height="845">
       </picture>
     </div>
   </div>
@@ -288,7 +273,7 @@
     <div class="l-footer__container">
       <div class="l-footer__block">
         <a href="/" class="l-footer__logo">
-          <img src="../../img/logo_footer.svg" width="100" height="49" alt="Leverages stuffing" />
+          <img src="../../assets/img/logo_footer.svg" width="100" height="49" alt="Leverages stuffing" />
         </a>
         <ul class="l-footer__policy">
           <li class="l-footer__policy--item"><a href="https://leverages.jp/privacypolicy/" target="_blank" rel="noreferrer">PRIVACY POLICY</a></li>
@@ -320,10 +305,8 @@
 </div>
     </footer>
   </div>
-  <!-- /.wrapper -->
 
-  <script type="text/javascript" src="../../js/contact.js"></script>
-  <!-- 全ページ共通 -->
+  <script type="text/javascript" src="../../assets/js/main.js"></script>
 
 </body>
 

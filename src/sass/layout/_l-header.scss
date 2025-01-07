@@ -80,7 +80,7 @@
 
 
     @include g.mq(pc) {
-      font-weight: 600; //semibold
+      font-weight: 600;
       @include g.font-rem(14);
       letter-spacing: 0.06em;
       display: inline-block;
@@ -110,7 +110,7 @@
 
     }
     @include g.mq(sp) {
-      font-weight: 600; //bold
+      font-weight: 600;
       @include g.font-rem(18);
       letter-spacing: 0.03em;
       display: block;
@@ -141,7 +141,6 @@
       background-size: 494px 338px;
     }
     @include g.mq(sp){
-      // position: absolute;
       bottom: 0;
       width: 100%;
 
@@ -167,7 +166,7 @@
   }
   &__apply--subttl{
     font-family: "Noto Sans JP", serif;
-    font-weight: 400; //Regular
+    font-weight: 400;
     line-height: 100%;
     letter-spacing: 0.06em;
     color: g.$white;
@@ -198,7 +197,6 @@
       background: #FFF;
       position: fixed;
       transition: all 400ms;
-      // top: calc((101vh + 600px) * -1);
       right: 0;
       top: g.$spHeader;
       opacity: 0;
@@ -227,7 +225,6 @@
   }
 }
 
-//Animation
 
 .fadeout {
   opacity: 1;
